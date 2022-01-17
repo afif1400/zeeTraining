@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-17T09:08:05.675Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="06ebCILSF9Ud-crxzV-5" version="16.2.7" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-01-17T10:40:34.246Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="_8RXkEoRSnOKuLl_MA-k" version="16.2.7" type="github" pages="4">
   <diagram id="RB05TvQkEh_5eE79HVn-" name="Page-1">
     <mxGraphModel dx="1422" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -213,6 +213,29 @@
         </mxCell>
         <mxCell id="jEZ3xZoqZNNqqeJi5ES3-23" value="com.zee.zee5app : base package( simply its a folder if u will into ur project folder)&lt;br&gt;&lt;br&gt;the base package must have a main method .&amp;nbsp; i.e. entry point of execution of ur application.&lt;br&gt;com.zee.zee5app.dto : to hold data transport objects&lt;br&gt;com.zee.zee5app.service : to hold service related stuff&lt;br&gt;com.zee.zee5app.repository : to hold db related code&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="jEZ3xZoqZNNqqeJi5ES3-1">
           <mxGeometry x="80" y="1370" width="450" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="jEZ3xZoqZNNqqeJi5ES3-24" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="jEZ3xZoqZNNqqeJi5ES3-1">
+          <mxGeometry x="615" y="1670" width="360" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="jEZ3xZoqZNNqqeJi5ES3-25" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" vertex="1" parent="jEZ3xZoqZNNqqeJi5ES3-1">
+          <mxGeometry x="200" y="1740" width="320" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="jEZ3xZoqZNNqqeJi5ES3-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="jEZ3xZoqZNNqqeJi5ES3-1" source="jEZ3xZoqZNNqqeJi5ES3-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="1850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jEZ3xZoqZNNqqeJi5ES3-26" value="Register reigister = new Register()" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="jEZ3xZoqZNNqqeJi5ES3-1">
+          <mxGeometry x="220" y="1980" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jEZ3xZoqZNNqqeJi5ES3-28" value="Object" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=20;" vertex="1" parent="jEZ3xZoqZNNqqeJi5ES3-1">
+          <mxGeometry x="740" y="1770" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jEZ3xZoqZNNqqeJi5ES3-29" value="Stack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="jEZ3xZoqZNNqqeJi5ES3-1">
+          <mxGeometry x="220" y="1750" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jEZ3xZoqZNNqqeJi5ES3-30" value="RT" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="jEZ3xZoqZNNqqeJi5ES3-1">
+          <mxGeometry x="555" y="1970" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
