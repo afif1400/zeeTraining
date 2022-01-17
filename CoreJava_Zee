@@ -1,1 +1,146 @@
-<mxfile host="app.diagrams.net" modified="2022-01-17T06:25:18.033Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" version="16.2.7" etag="-uKJLBrqDhfIKif9uW4N" type="github"><diagram id="RB05TvQkEh_5eE79HVn-">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-01-17T07:03:19.335Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="PR-SEn4zfR_yxsKMYv0O" version="16.2.7" type="github" pages="3">
+  <diagram id="RB05TvQkEh_5eE79HVn-" name="Page-1">
+    <mxGraphModel dx="1422" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-1" value="Java :&amp;nbsp;&lt;br&gt;programming language&amp;nbsp;&lt;br&gt;based on OOPs&lt;br&gt;platform independant&lt;br&gt;secure" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="20" y="70" width="320" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-2" value="JRE JDK" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="110" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-3" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="530" width="470" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-4" value="JDK" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="560" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="610" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-6" value="compilers&amp;nbsp;&lt;br&gt;Debuggers&lt;br&gt;javaDoc" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="750" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-7" value="JRE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="620" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-8" value="JVM" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="445" y="630" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1KDgRfWOl3ixLTB5vtjW-9" value="class lib." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="630" width="60" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="2YGmU1qMhaqqyFL1woXN" name="Page-2">
+    <mxGraphModel dx="1422" dy="-371" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="coSEhT-rp8n_X1UurorO-0" />
+        <mxCell id="coSEhT-rp8n_X1UurorO-1" parent="coSEhT-rp8n_X1UurorO-0" />
+        <mxCell id="coSEhT-rp8n_X1UurorO-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="coSEhT-rp8n_X1UurorO-1" source="coSEhT-rp8n_X1UurorO-2" target="coSEhT-rp8n_X1UurorO-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-2" value="class Loader" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="590" y="1750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="coSEhT-rp8n_X1UurorO-1" source="coSEhT-rp8n_X1UurorO-3" target="coSEhT-rp8n_X1UurorO-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-3" value="" style="whiteSpace=wrap;html=1;rounded=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="380" y="1900" width="540" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-4" value="JVM Memory" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="400" y="1910" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-5" value="Method Area" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="390" y="1950" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-6" value="Heap" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="510" y="1950" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-7" value="JVM language Stack" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="630" y="1950" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="coSEhT-rp8n_X1UurorO-1" source="coSEhT-rp8n_X1UurorO-8" target="coSEhT-rp8n_X1UurorO-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-8" value="PC Register" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="730" y="1950" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-9" value="Native Method stack" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="820" y="1950" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-10" value="will hold thecurrently executing instrcution.(if we are dealing with multi thread env. then each thread will have its own pc register." style="whiteSpace=wrap;html=1;rounded=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="632.5" y="2130" width="265" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="coSEhT-rp8n_X1UurorO-1" source="coSEhT-rp8n_X1UurorO-11" target="coSEhT-rp8n_X1UurorO-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-11" value="execution Engine" style="whiteSpace=wrap;html=1;rounded=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="50" y="2070" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="coSEhT-rp8n_X1UurorO-1" source="coSEhT-rp8n_X1UurorO-12" target="coSEhT-rp8n_X1UurorO-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-12" value="Native Method Interface" style="whiteSpace=wrap;html=1;rounded=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="50" y="2210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="coSEhT-rp8n_X1UurorO-1" source="coSEhT-rp8n_X1UurorO-13" target="coSEhT-rp8n_X1UurorO-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-13" value="Native Method Libraries" style="whiteSpace=wrap;html=1;rounded=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="50" y="2350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coSEhT-rp8n_X1UurorO-14" value="required for execution purpose." style="whiteSpace=wrap;html=1;rounded=1;fontSize=19;" vertex="1" parent="coSEhT-rp8n_X1UurorO-1">
+          <mxGeometry x="250" y="2350" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="3JsaySskEySL_O9Ur51m" name="Page-3">
+    <mxGraphModel dx="1422" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-0" />
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-1" parent="uYhVEkOP60C94WxXWMEZ-0" />
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="uYhVEkOP60C94WxXWMEZ-1">
+          <mxGeometry x="370" y="870" width="220" height="720" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="uYhVEkOP60C94WxXWMEZ-1" source="uYhVEkOP60C94WxXWMEZ-3" target="uYhVEkOP60C94WxXWMEZ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-3" value="class loader" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="uYhVEkOP60C94WxXWMEZ-1">
+          <mxGeometry x="410" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="uYhVEkOP60C94WxXWMEZ-1" source="uYhVEkOP60C94WxXWMEZ-4" target="uYhVEkOP60C94WxXWMEZ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-4" value="byte code verifier" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="uYhVEkOP60C94WxXWMEZ-1">
+          <mxGeometry x="410" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="uYhVEkOP60C94WxXWMEZ-1" source="uYhVEkOP60C94WxXWMEZ-5" target="uYhVEkOP60C94WxXWMEZ-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-5" value="interpreter" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="uYhVEkOP60C94WxXWMEZ-1">
+          <mxGeometry x="410" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="uYhVEkOP60C94WxXWMEZ-1" source="uYhVEkOP60C94WxXWMEZ-6" target="uYhVEkOP60C94WxXWMEZ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-6" value="Run-Time" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="uYhVEkOP60C94WxXWMEZ-1">
+          <mxGeometry x="410" y="1320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-7" value="hardware" style="rounded=1;whiteSpace=wrap;html=1;fontSize=19;" vertex="1" parent="uYhVEkOP60C94WxXWMEZ-1">
+          <mxGeometry x="410" y="1460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-8" value="1. bootstrap classloader&lt;br style=&quot;font-size: 19px;&quot;&gt;2. system classloader&lt;br style=&quot;font-size: 19px;&quot;&gt;3. extension class loader" style="whiteSpace=wrap;html=1;rounded=1;fontSize=19;" vertex="1" parent="uYhVEkOP60C94WxXWMEZ-1">
+          <mxGeometry x="610" y="900" width="230" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uYhVEkOP60C94WxXWMEZ-9" value="once the classes are loaded , and the code is verified , the interpreter will read the code line by line." style="whiteSpace=wrap;html=1;rounded=1;fontSize=19;" vertex="1" parent="uYhVEkOP60C94WxXWMEZ-1">
+          <mxGeometry x="610" y="1180" width="320" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
