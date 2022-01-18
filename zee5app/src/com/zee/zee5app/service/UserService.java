@@ -1,5 +1,6 @@
 package com.zee.zee5app.service;
 
+import com.zee.zee5app.dto.Register;
 import com.zee.zee5app.repository.UserRepository;
 // service objects are used to just call the services inside the main method
 //can we do this using 1 object?
@@ -32,5 +33,17 @@ public class UserService {
 		service = new UserService();
 		return service;
 		
+	}
+	
+	public String addUser(Register register) {
+		// do we need to consume the addUser method from repo.
+		return this.repository.addUser(register);
+	}
+	
+	public Register getUserById(String id) {
+		return repository.getUserById(id);
+	}
+	public Register[] getUsers() {
+		return repository.getUsers();
 	}
 }
