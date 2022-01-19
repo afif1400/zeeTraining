@@ -3,7 +3,9 @@ package com.zee.zee5app;
 import java.util.Iterator;
 
 import com.zee.zee5app.dto.Register;
+import com.zee.zee5app.repository.UserRepository;
 import com.zee.zee5app.service.UserService;
+import com.zee.zee5app.service.impl.UserServiceImpl;
 
 public class Main {
 
@@ -32,7 +34,7 @@ public class Main {
 		// can u create the login object?
 		// then can u print the login detials?
 		
-		UserService service = UserService.getInstance();
+		UserService service = UserServiceImpl.getInstance();
 		
 		for(int i=1;i<=20;i++) {
 		
@@ -58,6 +60,8 @@ public class Main {
 			if(register3!=null)
 			System.out.println(register3);
 		}
+		
+		UserRepository repository = null;
 		
 	}
 
