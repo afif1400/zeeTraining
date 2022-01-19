@@ -5,9 +5,14 @@ import java.net.URL;
 import com.zee.zee5app.dto.Login;
 import com.zee.zee5app.dto.Register;
 import com.zee.zee5app.dto.Subscription;
+import com.zee.zee5app.repository.UserRepository;
 import com.zee.zee5app.dto.Movie;
 import com.zee.zee5app.dto.Series;
 import com.zee.zee5app.service.UserService;
+import com.zee.zee5app.service.Impl.UserServiceImpl;
+import com.zee.zee5app.service.Impl.MovieServiceImpl;
+import com.zee.zee5app.service.Impl.SeriesServiceImpl;
+import com.zee.zee5app.service.Impl.SubscriptionServiceImpl;
 import com.zee.zee5app.service.SubscriptionService;
 import com.zee.zee5app.service.MovieService;
 import com.zee.zee5app.service.SeriesService;
@@ -44,7 +49,8 @@ public class Main {
 		System.out.println(login);
 		
 		// we dont introduce private here to make it accessible
-		UserService service = UserService.getInstance();
+		//now this line can connect to different files with UserServiceImpl2 and so on
+		UserService service = UserServiceImpl.getInstance();
 		// main is consuming the service
 		// if we even call this 100 times it will create only 1 object now
 		
@@ -59,16 +65,16 @@ public class Main {
 			
 		}
 		
-		Register register2 = service.getUserById("rg01");
+		Register register2 = service.getUserById("rg01") ;
 		System.out.println(register2!=null);
 		
-		for (Register register3 : service.getUsers()) {
+		for (Register register3 : service.getAllUsers()) {
 			if(register3!=null)
 			 System.out.println(register3);
 					
 		}
 			
-		SubscriptionService service2 = SubscriptionService.getInstance();
+		SubscriptionService service2 = SubscriptionServiceImpl.getInstance();
 		
 		for(int i =1; i<=3;i++) {
 			Subscription subscription = new Subscription();
@@ -86,7 +92,7 @@ public class Main {
 		}
 		
 		
-		MovieService service3 = MovieService.getInstance();
+		MovieService service3 = MovieServiceImpl.getInstance();
 		for(int i =1; i<=5;i++) {
 			Movie movie = new Movie();
 			movie.setId("mov00"+i);
@@ -96,14 +102,14 @@ public class Main {
 			movie.setGenre("action"+i);
 			movie.setLength(null);
 			movie.setReleaseDate(null);
-			movie.setTrailer(new URL("http://example.com/pages/page1.html"));
+			movie.setTrailer(null);
 			String result = service3.addMovie(movie);
 			System.out.println(result);
 			
 		}
 		
 
-		SeriesService service4 = SeriesService.getInstance();
+		SeriesService service4 = SeriesServiceImpl.getInstance();
 		for(int i =1; i<=7;i++) {
 			Series series = new Series();
 			series.setId("sr00"+i);
@@ -136,6 +142,11 @@ public class Main {
 			 System.out.println(series);
 					
 		}
+		
+		//this gives an error now coz its an interface thing
+		//UserRepository repository = new UserRepository();
+		
+		UserRepository repository = null;
 	
 
 	}
