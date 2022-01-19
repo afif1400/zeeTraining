@@ -15,7 +15,7 @@ public class Main {
 		// register : reference which will refer your object
 		// new : is used to create the object 
 		// Register() : constructor ===> DC ==> IDC
-		
+		// hello 
 		register.setFirstName("abhi");
 		register.setLastName("chivate");
 		register.setEmail("abhi@gmail.com");
