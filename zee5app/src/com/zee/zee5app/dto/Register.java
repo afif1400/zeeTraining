@@ -102,7 +102,7 @@ public class Register {
 	}
 
 	public void setPassword(String password) throws InvalidPasswordException {
-		if(password.matches("[A-Za-z0-9]+") == false)
+		if(password.matches("[A-Za-z0-9]+") == false || !(Character.isUpperCase(password.charAt(0))))
 			throw new InvalidPasswordException("password should only contain alphanumeric characters");
 		this.password = password;
 	}

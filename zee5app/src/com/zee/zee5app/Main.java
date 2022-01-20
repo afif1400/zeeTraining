@@ -30,7 +30,7 @@ public class Main {
 		UserService service = UserServiceImpl.getInstance();
 		//Use of parameterized constructor
 		//Register register5 = new Register(String id, String firstName, String lastName, String email, String password);
-		Register register6 = new Register("afs140","Akshay", "Sharma", "as9272@yahoo", "mac");
+		Register register6 = new Register("afs140","Akshay", "Sharma", "as9272@yahoo", "Mac");
 		System.out.println(register6);
 		
 		//Create register object
@@ -62,7 +62,7 @@ public class Main {
 			e1.printStackTrace();
 		}
 		try {
-			register.setPassword("sdadr@4");
+			register.setPassword("sdadr4");
 		} catch (InvalidPasswordException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
