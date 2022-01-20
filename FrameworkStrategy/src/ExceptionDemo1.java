@@ -6,13 +6,41 @@ public class ExceptionDemo1 {
 		int c =0;
 		try {
 			c = a / b;
+			
+			String s = null;// it is not ref any object
+			// s.length()===> NPE 
+			System.out.println(s.length()); // NPE object
+			// NPE will be raised
 			return c;
 			// inside the try or catch block then 
 			// before returning the value it will execute the finally block 
 			// and then it will return the value.
-		} catch (ArithmeticException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		}
+		
+		catch (ArithmeticException e) {
+			// can u write a code which will work only for non zero value 
+			// acceptance?
+			System.out.println("enter the value for b again");
+			Scanner scanner = new Scanner(System.in);
+			
+			int d = scanner.nextInt();
+			
+			c  = a/ d;
+			return c;
+		}
+		catch (NullPointerException e) {
+			// TODO: handle exception
+			System.out.println("npe caught");
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			if(e instanceof NullPointerException) {
+				
+			}
+			if (e instanceof ArithmeticException ) {
+				
+			}
+			System.out.println("any exception can be handled by this handler");
 		}
 		finally {
 		System.out.println("hello from Zee");

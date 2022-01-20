@@ -1,11 +1,18 @@
 package com.zee.zee5app.repository.impl;
 
+import java.util.ArrayList;
+import java.util.Optional;
+
 import com.zee.zee5app.dto.Register;
 import com.zee.zee5app.repository.UserRepository;
 
 public class UserRepositoryImpl implements UserRepository {
-	private Register[] registers = new Register[10];
-	private static int count=-1;
+	
+	private ArrayList<Register> arrayList = new ArrayList<>();
+	// when u will use DC for AL then by default it will hold 10 elements
+	// of type Register.
+	
+	//private static int count=-1;
 	
 	private UserRepositoryImpl() {
 		// TODO Auto-generated constructor stub
@@ -19,29 +26,16 @@ public class UserRepositoryImpl implements UserRepository {
 		}
 		return repository;
 	}
+
 	@Override
 	public String addUser(Register register) {
-		//registers.length ====> it will give us the availability
+		// TODO Auto-generated method stub
+		boolean result = this.arrayList.add(register);
 		
-				if(count==registers.length-1) {
-					// array is full or we should go for dynamically growing the 
-					// size of array.
-					Register temp[] = new Register[registers.length*2];
-					
-					// do we need to copy the contents from old to new? Yes
-					
-					System.arraycopy(registers, 0, temp, 0, registers.length);
-					registers= temp;
-					registers[++count] = register;
-					
-					
-					return "success";
-					
-				}
-				registers[++count] = register;
-				return "success";
-				// 
-				
+		if(result) {
+			return "success";
+		}
+		return "fail";
 	}
 
 	@Override
@@ -51,9 +45,20 @@ public class UserRepositoryImpl implements UserRepository {
 	}
 
 	@Override
-	public Register getUserById(String id) {
+	public Optional<Register> getUserById(String id) {
 		// TODO Auto-generated method stub
-		return null;
+		// do we need to traverse the AL?
+		// yes 
+		Register register2 = null;
+		for (Register register : arrayList) {
+			if(register.getId().equals(id)) {
+				register2= register;
+			}
+		}
+		return Optional.ofNullable(register2);
+		// if register2 is holding null it will act like an empty
+		// if register2 is holding object it will act like of
+		
 	}
 
 	@Override
@@ -67,5 +72,5 @@ public class UserRepositoryImpl implements UserRepository {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
 }
