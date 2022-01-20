@@ -19,7 +19,7 @@ public class UserService2 {
 	// and we have to share reference with others
 	// to do the same we have to declare a method
 	
-	private static UserService service = null;
+	private static UserService2 service = null;
 	//this would be static only one copy
 	// private makes it inaccessible to outside world, so we make it static to make it accessible outside
 	

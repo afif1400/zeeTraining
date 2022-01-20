@@ -1,10 +1,15 @@
 package com.zee.zee5app;
 
 import java.net.URL;
+import java.util.Optional;
 
 import com.zee.zee5app.dto.Login;
 import com.zee.zee5app.dto.Register;
 import com.zee.zee5app.dto.Subscription;
+import com.zee.zee5app.exception.InvalidEmailException;
+import com.zee.zee5app.exception.InvalidIdLengthException;
+import com.zee.zee5app.exception.InvalidNameException;
+import com.zee.zee5app.exception.InvalidPasswordException;
 import com.zee.zee5app.repository.UserRepository;
 import com.zee.zee5app.dto.Movie;
 import com.zee.zee5app.dto.Series;
@@ -19,8 +24,14 @@ import com.zee.zee5app.service.SeriesService;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws 
+	InvalidIdLengthException, InvalidNameException, InvalidPasswordException, InvalidEmailException {
 		// TODO Auto-generated method stub
+		UserService service = UserServiceImpl.getInstance();
+		//Use of parameterized constructor
+		//Register register5 = new Register(String id, String firstName, String lastName, String email, String password);
+		Register register6 = new Register("afs140","Akshay", "Sharma", "as9272@yahoo", "mac");
+		System.out.println(register6);
 		
 		//Create register object
 		Register register = new Register();
@@ -29,13 +40,43 @@ public class Main {
 		// new : is used to create object - in heap memory
 		// Register(): default constructor
 		
-		register.setFirstName("rajiv");
-		register.setLastName("gupta");
-		register.setEmail("rg@321");
+		//here in Main we prefer try/catch method as if we use throw method it will hold off all the execution
+		// in other like service, repo etc. we prefer throw method
+		
+	    //this is 1st approach as id is not validating name will also not be validated as everything will give null
+		try {
+			register.setId("rg0001");
+			register.setFirstName("rajiv");
+			register.setLastName("gupta"); 
+		} catch (InvalidIdLengthException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    catch (InvalidNameException e) {
+	    	e.printStackTrace();
+	    }
+		try {
+			register.setEmail("rg@321");
+		} catch (InvalidEmailException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			register.setPassword("sdadr@4");
+		} catch (InvalidPasswordException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+		//String result1  = service.addUser(register);
+		//System.out.println(result1+"checkpoint1");
+		
+		//System.out.println(service.getUserById("rg00001").get()+"checkpoint2");
 		
 		System.out.println(register);
 		System.out.println(register.toString());
-		
+		  
 		// whenever you will print the referenfe then it will call toString() method
 		System.out.println(register.getEmail());
 		
@@ -50,28 +91,69 @@ public class Main {
 		
 		// we dont introduce private here to make it accessible
 		//now this line can connect to different files with UserServiceImpl2 and so on
-		UserService service = UserServiceImpl.getInstance();
+		
 		// main is consuming the service
 		// if we even call this 100 times it will create only 1 object now
 		
-		for(int i =1; i<=20;i++) {
+		// now only id part in register will not be show other 
+		for(int i =1; i<=4;i++) {
 			Register register2 = new Register();
-			register2.setId("rg00"+i);
-			register2.setFirstName("rajiv"+i);
-			register2.setFirstName("gupta"+i);
-			register2.setEmail("rg2321"+i);
+			try {
+				register2.setId("rg000"+i);
+				
+			} catch (InvalidIdLengthException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			//this is 2nd approach
+			try {
+				register2.setFirstName("rajiv"+i);
+				register2.setLastName("gupta"+i);
+			} catch (InvalidNameException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch(Exception e) {
+				
+			}
+			//it is base class of all exceptions
+			// max available hierarchy is till throwable not above it i.e. Object class
+			catch(Throwable e) {
+				
+			}
+			//this will give error even though Object is a parent class of throwable
+			//It stops at throwable coz Object class is parent class to other methods like toString, hashCode etc.
+//			catch(Object e) {
+//				
+//			}
+			
+			try {
+				register2.setEmail("rg2321@gml"+i);
+			} catch (InvalidEmailException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			String result = service.addUser(register2);
 			System.out.println(result);
 			
 		}
 		
-		Register register2 = service.getUserById("rg01") ;
-		System.out.println(register2!=null);
+		//Register register2 = service.getUserById("rg01") ;
+		//System.out.println(register2!=null);
 		
-		for (Register register3 : service.getAllUsers()) {
-			if(register3!=null)
-			 System.out.println(register3);
-					
+//		for (Register register3 : service.getAllUsers()) {
+//			if(register3!=null)
+//			 System.out.println(register3);
+//					
+//		}
+		
+		Optional<Register> optional = service.getUserById("rg0001");
+		if(optional.isPresent()) {
+			System.out.println("getUserById"+optional.get());
+		}
+		else {
+			System.out.println("Ïd not found");
 		}
 			
 		SubscriptionService service2 = SubscriptionServiceImpl.getInstance();
