@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Optional;
 
 import com.zee.zee5app.dto.Register;
+import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.exception.InvalidNameException;
 import com.zee.zee5app.repository.UserRepository;
@@ -77,22 +78,57 @@ public class Main {
 		}
 		
 	
+		for(int i=1;i<=20;i++) {
+			
+			Register register2 = new Register();
+			try {
+				register2.setId("ab0000"+i);
+				register2.setFirstName("abhi"+i);
+				register2.setLastName("chivate"+i);
+			} catch (InvalidIdLengthException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvalidNameException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch (Exception e) {
+				// TODO: handle exception
+			}
+			catch (Throwable e) {
+				// TODO: handle exception
+			}	
+			
+			register2.setPassword("abhi");
+			String result = service.addUser(register2);
+			System.out.println(result);
+		}
+		
+	
 		
 		
 		// userservice object
 		// main is consuming the service ?
 		
-		Optional<Register> optional = service.getUserById("ab00001");
-		
-		if(optional.isPresent()) {
+		Optional<Register> optional;
+		try {
+			optional = service.getUserById("ab00001");
+			if(optional.isPresent()) {
+				
+				System.out.println("getUserById"+optional.get());
+			}
+			else {
+				System.out.println("id not found/available");
+			}
 			
-			System.out.println("getUserById"+optional.get());
-		}
-		else {
-			System.out.println("id not found/available");
+		
+		} catch (IdNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
-	
+		service.getAllUserDetails().forEach(e->System.out.println(e));
+		
 		
 	}
 

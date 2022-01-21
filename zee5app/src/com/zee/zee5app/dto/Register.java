@@ -20,7 +20,8 @@ import lombok.ToString;
 //@EqualsAndHashCode
 //@NoArgsConstructor
 //AllArgsConstructor
-public class Register {
+public class Register implements Comparable<Register>
+{
 	
 	public Register(String id, String firstName, String lastName, String email, String password)
 			throws InvalidIdLengthException, InvalidNameException {
@@ -99,6 +100,12 @@ public class Register {
 		return Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName)
 				&& Objects.equals(id, other.id) && Objects.equals(lastName, other.lastName)
 				&& Objects.equals(password, other.password);
+	}
+
+	@Override
+	public int compareTo(Register o) {
+		// TODO Auto-generated method stub
+		return o.id.compareTo(this.getId());
 	}
 	
 	// private stuff will be accessible only inside the class.

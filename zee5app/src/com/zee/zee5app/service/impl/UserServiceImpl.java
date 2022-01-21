@@ -1,11 +1,13 @@
 package com.zee.zee5app.service.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.zee.zee5app.dto.Register;
+import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.repository.UserRepository;
 import com.zee.zee5app.repository.impl.UserRepositoryImpl;
-import com.zee.zee5app.repository.impl.UserRepositoryImpl2;
+
 import com.zee.zee5app.service.UserService;
 
 public class UserServiceImpl implements UserService {
@@ -41,7 +43,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public Optional<Register> getUserById(String id) {
+	public Optional<Register> getUserById(String id) throws IdNotFoundException {
 		// TODO Auto-generated method stub
 		return userRepository.getUserById(id);
 	}
@@ -53,9 +55,15 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String deleteUserById(String id) {
+	public String deleteUserById(String id) throws IdNotFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		return userRepository.deleteUserById(id);
+	}
+
+	@Override
+	public List<Register> getAllUserDetails() {
+		// TODO Auto-generated method stub
+		return userRepository.getAllUserDetails();
 	}
 
 }
