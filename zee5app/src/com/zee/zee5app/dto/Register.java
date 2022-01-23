@@ -25,10 +25,11 @@ import java.lang.*;
 //@NoArgsConstructor
 
 //we use this method to override instead of other one used below coz when we change anything later, it can handle on its own
-//@EqualsAndHashCode
+@EqualsAndHashCode
 @ToString
 
-public class Register {
+public class Register implements Comparable<Register>{
+//public class Register {
 	
 	public Register(String id, String firstName, String lastName, String email, String password) 
 			throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
@@ -61,7 +62,7 @@ public class Register {
 		//Explicit Default Constructor
 		// any kind of customization during the initialization of object then its better
 		// to introduce ECD or PC or both as per need.
-		System.out.println("hello");
+		//System.out.println("hello");
 	}
 
 	//here Main is caller for this
@@ -96,15 +97,26 @@ public class Register {
 	}
 
 	public void setEmail(String email) throws InvalidEmailException {
-		if(email.length()<4)
-			throw new InvalidEmailException("length should be greater that 4");
+		//check for email ending with and @
+		if(email.endsWith(".com")==false || email.indexOf("@")==-1)
+			throw new InvalidEmailException("email invalid");
 		this.email = email;
 	}
 
 	public void setPassword(String password) throws InvalidPasswordException {
 		if(password.matches("[A-Za-z0-9]+") == false || !(Character.isUpperCase(password.charAt(0))))
-			throw new InvalidPasswordException("password should only contain alphanumeric characters");
+			throw new InvalidPasswordException("password should only contain alphanumeric characters and first letter uppercase");
 		this.password = password;
+	}
+
+	@Override
+	public int compareTo(Register o) {
+		 //TODO Auto-generated method stub
+		//ascending
+		return this.id.compareTo(o.getId());
+		
+		//descending order
+		//return o.id.compareTo(this.getId())
 	}
 	
 	
@@ -135,7 +147,4 @@ public class Register {
 	//setter function : is used to set the value for a particular field
 	//getter function : to get/return the value of a specific field
 	
-	
-	
-
 }
