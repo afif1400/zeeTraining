@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-24T05:49:17.095Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="1AU1mbiCn6XYxo00VwMK" version="16.4.2" type="github" pages="10">
+<mxfile host="app.diagrams.net" modified="2022-01-24T15:26:10.596Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="B9TxknmorvcC_WgR9aOx" version="16.4.2" type="github" pages="10">
   <diagram id="RB05TvQkEh_5eE79HVn-" name="Page-1">
     <mxGraphModel dx="1422" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -786,10 +786,37 @@
     </mxGraphModel>
   </diagram>
   <diagram id="iwQlSJJ7FmFJNSGFlZLx" name="map">
-    <mxGraphModel dx="782" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1632" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="5U-fU1Q66bDiIxiXQXVH-0" />
         <mxCell id="5U-fU1Q66bDiIxiXQXVH-1" parent="5U-fU1Q66bDiIxiXQXVH-0" />
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=22;" edge="1" parent="5U-fU1Q66bDiIxiXQXVH-1" source="5U-fU1Q66bDiIxiXQXVH-2" target="5U-fU1Q66bDiIxiXQXVH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=22;" edge="1" parent="5U-fU1Q66bDiIxiXQXVH-1" source="5U-fU1Q66bDiIxiXQXVH-2" target="5U-fU1Q66bDiIxiXQXVH-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=22;" edge="1" parent="5U-fU1Q66bDiIxiXQXVH-1" source="5U-fU1Q66bDiIxiXQXVH-2" target="5U-fU1Q66bDiIxiXQXVH-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-2" value="Map" style="rounded=1;whiteSpace=wrap;html=1;fontSize=22;" vertex="1" parent="5U-fU1Q66bDiIxiXQXVH-1">
+          <mxGeometry x="150" y="40" width="330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=22;" edge="1" parent="5U-fU1Q66bDiIxiXQXVH-1" source="5U-fU1Q66bDiIxiXQXVH-3" target="5U-fU1Q66bDiIxiXQXVH-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-3" value="HashMap" style="whiteSpace=wrap;html=1;fontSize=22;rounded=1;" vertex="1" parent="5U-fU1Q66bDiIxiXQXVH-1">
+          <mxGeometry x="20" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-5" value="TreeMap" style="whiteSpace=wrap;html=1;fontSize=22;rounded=1;" vertex="1" parent="5U-fU1Q66bDiIxiXQXVH-1">
+          <mxGeometry x="640" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-7" value="LinkedHashMap" style="whiteSpace=wrap;html=1;fontSize=22;rounded=1;" vertex="1" parent="5U-fU1Q66bDiIxiXQXVH-1">
+          <mxGeometry x="-25" y="320" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5U-fU1Q66bDiIxiXQXVH-9" value="we can insert duplicate data for value part but not for key part&lt;br&gt;&lt;br&gt;null as a value is alllowed in all maps&amp;nbsp;&lt;br&gt;&lt;br&gt;null as a single key allowed in map except Treemap ==&amp;gt; it will throw NPE." style="whiteSpace=wrap;html=1;fontSize=22;rounded=1;" vertex="1" parent="5U-fU1Q66bDiIxiXQXVH-1">
+          <mxGeometry x="255" y="180" width="225" height="510" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
