@@ -105,7 +105,7 @@ public class Register implements Comparable<Register>
 	@Override
 	public int compareTo(Register o) {
 		// TODO Auto-generated method stub
-		return o.id.compareTo(this.getId());
+		return o.id.compareTo(this.id);
 	}
 	
 	// private stuff will be accessible only inside the class.
