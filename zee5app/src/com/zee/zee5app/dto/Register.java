@@ -30,7 +30,7 @@ import java.lang.*;
 
 public class Register implements Comparable<Register>{
 //public class Register {
-	
+	//add contact number field
 	public Register(String id, String firstName, String lastName, String email, String password) 
 			throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
 		super();

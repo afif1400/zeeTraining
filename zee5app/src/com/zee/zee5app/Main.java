@@ -332,7 +332,7 @@ public class Main {
 		System.out.println("\nAfter updatig the series");
 		
 		try {
-			Series series5 = new Series("sr0012","xyz12",null,null,null,null,null,null);
+			Series series5 = new Series("sr0002","xyz1",null,null,null,null,null,null);
 			service4.modifySeries("sr0002", series5);
 		} catch (NameNotFoundException e1) {
 			// TODO Auto-generated catch block
