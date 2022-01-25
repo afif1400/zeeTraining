@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-25T08:47:58.852Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="MGnxYLVDh4VjaUP8gIXH" version="16.4.2" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2022-01-25T11:53:31.274Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="7BGplzFnxtRn6yQYMu1U" version="16.4.2" type="github" pages="11">
   <diagram id="RB05TvQkEh_5eE79HVn-" name="Page-1">
     <mxGraphModel dx="1422" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -821,7 +821,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="kZrS0mR6vGUiFoU0gpDn" name="MySQL">
-    <mxGraphModel dx="1210" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="874" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-0" />
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-1" parent="hZtuSmAnf1IBMa6VYxiO-0" />
@@ -971,6 +971,27 @@
         </mxCell>
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-53" value="id" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#9673a6;fillColor=#e1d5e7;fontSize=22;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
           <mxGeometry x="1035" y="105" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hZtuSmAnf1IBMa6VYxiO-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=22;" edge="1" parent="hZtuSmAnf1IBMa6VYxiO-1" source="hZtuSmAnf1IBMa6VYxiO-56" target="hZtuSmAnf1IBMa6VYxiO-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hZtuSmAnf1IBMa6VYxiO-56" value="DDL :&amp;nbsp;&lt;br&gt;Data Defn. Language&lt;br&gt;&lt;br&gt;create&lt;br&gt;alter&amp;nbsp;&lt;br&gt;drop&lt;br&gt;truncate" style="rounded=1;whiteSpace=wrap;html=1;fontSize=22;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
+          <mxGeometry x="110" y="400" width="120" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="hZtuSmAnf1IBMa6VYxiO-57" value="which are used to modify ur db structures." style="whiteSpace=wrap;html=1;fontSize=22;rounded=1;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
+          <mxGeometry x="310" y="470" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hZtuSmAnf1IBMa6VYxiO-59" value="DML : data Manipulation Language&lt;br&gt;&lt;br&gt;insert&amp;nbsp;&lt;br&gt;update&lt;br&gt;delete" style="rounded=1;whiteSpace=wrap;html=1;fontSize=22;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
+          <mxGeometry x="100" y="710" width="120" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="hZtuSmAnf1IBMa6VYxiO-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=22;" edge="1" parent="hZtuSmAnf1IBMa6VYxiO-1" source="hZtuSmAnf1IBMa6VYxiO-60" target="hZtuSmAnf1IBMa6VYxiO-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hZtuSmAnf1IBMa6VYxiO-60" value="DQL : data Query Language: select" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=22;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
+          <mxGeometry x="80" y="930" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="hZtuSmAnf1IBMa6VYxiO-61" value="to retrieve the data." style="whiteSpace=wrap;html=1;fontSize=22;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
+          <mxGeometry x="340" y="980" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
