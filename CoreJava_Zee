@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-25T06:20:45.310Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="Ql07GEDDM1a6_4hlTqLh" version="16.4.2" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2022-01-25T08:47:58.852Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="MGnxYLVDh4VjaUP8gIXH" version="16.4.2" type="github" pages="11">
   <diagram id="RB05TvQkEh_5eE79HVn-" name="Page-1">
     <mxGraphModel dx="1422" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -821,7 +821,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="kZrS0mR6vGUiFoU0gpDn" name="MySQL">
-    <mxGraphModel dx="782" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1210" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-0" />
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-1" parent="hZtuSmAnf1IBMa6VYxiO-0" />
@@ -900,6 +900,9 @@
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-6" value="Episodes" style="swimlane;fontSize=22;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
           <mxGeometry x="1510" y="80" width="200" height="300" as="geometry" />
         </mxCell>
+        <mxCell id="hZtuSmAnf1IBMa6VYxiO-48" value="epi length" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#006EAF;fillColor=#1ba1e2;fontSize=22;fontColor=#ffffff;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-6">
+          <mxGeometry x="45" y="145" width="110" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-7" value="username" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#d79b00;fillColor=#ffe6cc;fontSize=22;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
           <mxGeometry x="425" y="125" width="110" height="30" as="geometry" />
         </mxCell>
@@ -956,9 +959,6 @@
         </mxCell>
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-47" value="episodename" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#006EAF;fillColor=#1ba1e2;fontSize=22;fontColor=#ffffff;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
           <mxGeometry x="1555" y="185" width="150" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="hZtuSmAnf1IBMa6VYxiO-48" value="epi length" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#006EAF;fillColor=#1ba1e2;fontSize=22;fontColor=#ffffff;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
-          <mxGeometry x="1525" y="235" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="hZtuSmAnf1IBMa6VYxiO-49" value="location" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#006EAF;fillColor=#1ba1e2;fontSize=22;fontColor=#ffffff;" vertex="1" parent="hZtuSmAnf1IBMa6VYxiO-1">
           <mxGeometry x="1545" y="265" width="90" height="30" as="geometry" />
