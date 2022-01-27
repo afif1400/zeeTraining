@@ -1,5 +1,7 @@
 package com.zee.zee5app.dto;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Objects;
 
 import com.zee.zee5app.exception.InvalidIdLengthException;
@@ -43,7 +45,7 @@ public class Register implements Comparable<Register>
 	private String lastName;
 	private String email;
 	private String password;
-	private String contactNumber;
+	private BigDecimal contactNumber;
 	
 	public Register() {
 		// EDC

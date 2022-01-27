@@ -17,11 +17,8 @@ import com.zee.zee5app.repository.UserRepository;
 
 public class UserRepositoryImpl implements UserRepository {
 	
-	private TreeSet<Register> set = new TreeSet<>();
-	// when u will use DC for AL then by default it will hold 16 elements
-	// of type Register.
 	
-	//private static int count=-1;
+	D
 	
 	private UserRepositoryImpl() {
 		// TODO Auto-generated constructor stub
@@ -39,15 +36,13 @@ public class UserRepositoryImpl implements UserRepository {
 	@Override
 	public String addUser(Register register) {
 		// TODO Auto-generated method stub
-		boolean result = this.set.add(register);
-		System.out.println(this.set.size());
-		if(result) {
-			return "success";
-		}
-		return "fail";
+		
+		// the user details should be stored in DB.
+		
+		return null;
 	}
 
-	@Override // assignment
+	@Override
 	public String updateUser(String id, Register register) {
 		// TODO Auto-generated method stub
 		return null;
@@ -56,66 +51,26 @@ public class UserRepositoryImpl implements UserRepository {
 	@Override
 	public Optional<Register> getUserById(String id) throws IdNotFoundException {
 		// TODO Auto-generated method stub
-		// do we need to traverse the AL?
-		// yes 
-		Register register2 = null;
-		for (Register register : set) {
-			if(register.getId().equals(id)) {
-				register2= register;
-			}
-		}
-		return Optional.ofNullable(Optional
-				.of(register2)
-				.orElseThrow(()-> new IdNotFoundException("id not found")));
-				//.orElseThrow(()-> new IdNotFoundException("id not found"));
-		// if register2 is holding null it will act like an empty
-		// if register2 is holding object it will act like of
-		
+		return null;
 	}
 
 	@Override
 	public Register[] getAllUsers() {
 		// TODO Auto-generated method stub
-		// transform the collection to array
-		
-		Register register[] = new Register[set.size()];
-		
-		return set.toArray(register);
+		return null;
+	}
+
+	@Override
+	public List<Register> getAllUserDetails() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public String deleteUserById(String id) throws IdNotFoundException {
 		// TODO Auto-generated method stub
-		
-		// 
-		Optional<Register> optional = this.getUserById(id);
-		
-		if(optional.isPresent()) {
-			// removal
-			
-			boolean result = set.remove(optional.get());
-			
-			if(result) {
-				return "success";
-			}
-			else
-				return "fail";
-		}
-		return "fail";
-		
+		return null;
 	}
 
-	@Override
-	public List<Register> getAllUserDetails() {
 		
-		//Collections.sort(set);
-		// to convert the set to list
-		//return set;
-		// descending order 
-		// here we need to share the result in terms of asc. 
-		// desc===> asc
-		
-		return new ArrayList<>(set.descendingSet());
-	}
-	
 }
