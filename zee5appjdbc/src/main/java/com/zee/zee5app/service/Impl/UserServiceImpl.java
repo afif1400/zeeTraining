@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public Register[] getAllUsers() {
+	public Register[] getAllUsers() throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
 		// TODO Auto-generated method stub
 		return this.repository.getAllUsers();
 	}
@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserService {
 		return this.repository.deleteUserById(id);
 	}
 	@Override
-	public List<Register> getAllUserDetails() {
+	public Optional<List<Register>> getAllUserDetails() throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
 		// TODO Auto-generated method stub
 		return this.repository.getAllUserDetails();
 	}

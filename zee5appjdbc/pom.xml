@@ -3,11 +3,11 @@
 	<groupId>com.zee.zee5appjdbc</groupId>
 	<artifactId>zee5appjdbc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <properties>
-     <maven.comiler.source>1.8</maven.comiler.source>
-     <maven.compiler.target>1.8</maven.compiler.target>
-     
-    </properties>
+	<properties>
+		<maven.comiler.source>1.8</maven.comiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
@@ -24,6 +24,17 @@
 			<version>1.18.22</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mindrot.bcrypt/bcrypt -->
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+    <version>2.6.2</version>
+</dependency>
+
+
 
 	</dependencies>
 

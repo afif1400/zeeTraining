@@ -15,14 +15,18 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.LinkedList;
 
+import com.zee.zee5app.dto.Login;
+import com.zee.zee5app.dto.ROLE;
 import com.zee.zee5app.dto.Register;
 import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidEmailException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.exception.InvalidNameException;
 import com.zee.zee5app.exception.InvalidPasswordException;
+import com.zee.zee5app.repository.LoginRepository;
 import com.zee.zee5app.repository.UserRepository;
 import com.zee.zee5app.utils.DBUtils;
+import com.zee.zee5app.utils.PasswordUtils;
 
 // this can be used for 1st database
 //similary make another file and use it for 2nd database and so on
@@ -60,6 +64,7 @@ public class UserRepositoryImpl implements UserRepository {
 //	private TreeSet<Register> set = new TreeSet<>();
 	
 	DBUtils dbUtils = DBUtils.getInstance();
+	LoginRepository loginrepository = LoginRepositoryImpl.getInstance();
 	
 	//private static int count = -1;
 	
@@ -111,23 +116,55 @@ public class UserRepositoryImpl implements UserRepository {
 			preparedStatement.setString(2, register.getFirstName());
 			preparedStatement.setString(3, register.getLastName());
 			preparedStatement.setString(4, register.getEmail());
-			preparedStatement.setString(6, register.getPassword());
 			preparedStatement.setBigDecimal(5, register.getContactnumber());
+			
+			//encrypting and storing password
+			String salt = PasswordUtils.getSalt(30);
+			String encryptedPassword = PasswordUtils.generateSecurePassword(register.getPassword(), salt);
+			preparedStatement.setString(6, encryptedPassword);
+			
+			///username: emailid
+			//regid  :regid
+			//password: password
+			//storing these details in login table here only coz we will get all these details during registration
+			
 			
 			int result = preparedStatement.executeUpdate();
 			//the return integer in this statement is the number of rows affected by the DML statement
 			//insert  1: one row is inserted
 			// delete 3 : 3 rows deleted
 			
-			if(result >0) {
-				return "user added successfully";
+			if(result>0) {
+				Login login = new Login();
+				login.setUserName(register.getEmail());
+				login.setPassword(encryptedPassword);
+				login.setRegId(register.getId());
+				login.setRole(ROLE.ROLE_USER);
+				
+				String result2 = loginrepository.addCredentials(login);
+				if(result2.equals("success")) {
+					//connection.commit();
+					return "user added successfully";
+					
+				}
+				else {
+					connection.rollback();
+					return "fail11";
+				}
 			}
-			else
+			else {
+				connection.rollback();
 				return "fail11";
-			
-		} catch (SQLException e) {
+			}
+				} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			try {
+				connection.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			return "fail11";
 		}
 		finally {
@@ -192,21 +229,102 @@ public class UserRepositoryImpl implements UserRepository {
 	}
 	
 	@Override
-	public Register[] getAllUsers() {
+	public Register[] getAllUsers() throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
 		// TODO Auto-generated method stub
-		return null;
+		Optional<List<Register>> optional = getAllUserDetails();
+		if(optional.isEmpty()) {
+			return null;
+		}
+		else {
+			List<Register> list = optional.get();
+			Register[] registers = new Register[list.size()];
+			return list.toArray(registers);
+		}
+		
 	}
 	
 	@Override
-	public List<Register> getAllUserDetails() {
+	public Optional<List<Register>> getAllUserDetails() throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
 		// TODO Auto-generated method stub
-		return null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		ArrayList<Register> arraylist = new ArrayList<>();
+		
+		String selectStatement = "select * from register";
+		
+		connection = dbUtils.getConnection();
+		
+		try {
+			preparedStatement = connection.prepareStatement(selectStatement);
+			//preparedStatement.setString(1);
+			
+			
+			resultSet = preparedStatement.executeQuery();
+			
+			
+			while(resultSet.next()) {
+			
+				Register register = new Register();
+				register.setId(resultSet.getString("regId"));
+				register.setFirstName(resultSet.getString("firstname"));
+				register.setLastName(resultSet.getString("lastname"));
+				register.setEmail(resultSet.getString("email"));
+				register.setPassword(resultSet.getString("password"));
+				register.setContactnumber(resultSet.getBigDecimal("contactnumber"));
+				arraylist.add(register);
+			}
+			//ofNullable coz we not 100% sure we will get the obj or not
+			return Optional.ofNullable(arraylist);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			//return "fail12";
+		}
+		finally {
+			//closure work
+			dbUtils.closeConnection(connection);
+		}
+		return Optional.empty();
 	}
 	
 	@Override
 	public String deleteUserById(String id) throws IdNotFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		String deleteStatement = "delete from register where regId=?";
+		
+		connection = dbUtils.getConnection();
+		
+		try {
+			preparedStatement = connection.prepareStatement(deleteStatement);
+			preparedStatement.setString(1,id);
+			
+			int result = preparedStatement.executeUpdate();
+			if(result>0) {
+				//delete his credentials
+				Register register3 = new Register();
+				//login2.setUserName(register3.getEmail());
+				String result4  = loginrepository.deleteCredentials(register3.getEmail());
+				if(result4 == "success")
+					return "record deleted";
+			}
+			else
+				return "fail";
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			//return "fail12";
+		}
+		finally {
+			//closure work
+			dbUtils.closeConnection(connection);
+		}
+		return "fail";
 	}
 	
 	
@@ -280,7 +398,7 @@ public class UserRepositoryImpl implements UserRepository {
 //	@Override
 //	public Register[] getAllUsers() {
 //		// TODO Auto-generated method stub
-//		//transorm collection to array
+//		//transform collection to array
 //		
 //		Register[] register = new Register[set.size()];
 //		return set.toArray(register);
