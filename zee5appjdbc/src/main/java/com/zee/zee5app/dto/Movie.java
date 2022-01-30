@@ -21,8 +21,8 @@ import lombok.ToString;
 public class Movie implements Comparable<Movie>{
 	
 	
-	public Movie(String id, String movieName, String length, String genre, String releaseDate, URL trailer,
-			String[] cast, String ageLimit) throws InvalidIdLengthException, NameNotFoundException {
+	public Movie(String id, String movieName, String cast, String length, String releaseDate, String trailer,
+			String language, String ageLimit, String genre) throws InvalidIdLengthException, NameNotFoundException {
 		super();
 		this.setId(id);
 		this.setMovieName(movieName);
@@ -33,6 +33,7 @@ public class Movie implements Comparable<Movie>{
 		this.setLength(length);
 		this.setReleaseDate(releaseDate);
 		this.setTrailer(trailer);
+		this.setLanguage(language);
 	}
 	
 	public Movie() {
@@ -51,9 +52,10 @@ public class Movie implements Comparable<Movie>{
 	private String genre;
 	
 	private String releaseDate;
-	private URL trailer;
-	private String Cast[];
+	private String trailer;
+	private String Cast;
 	private String ageLimit;
+	private String language;
 	
 	
 
@@ -78,5 +80,10 @@ public class Movie implements Comparable<Movie>{
 		}
 		this.movieName = movieName;
 	}
-	
+
+//	public void setCast(String[] string) {
+//		// TODO Auto-generated method stub
+//		this.Cast = Cast;
+//	}
+//	
 }

@@ -21,8 +21,8 @@ public class Subscription implements Comparable<Subscription>{
 		
 	}
 
-	public Subscription(String type, String dateOfPurchase, String id, String paymentMode, int amount,
-			String status, String autoRenewal, String expiryDate) throws InvalidIdLengthException, InvalidAmountException {
+	public Subscription(String id, String dateOfPurchase, String exprirydate, float amount, String paymentmode,
+			String status, String type, String autorenewal, String regId) throws InvalidIdLengthException, InvalidAmountException {
 		super();
 		this.setId(id);
 		this.setDateOfPurchase(dateOfPurchase);
@@ -31,8 +31,11 @@ public class Subscription implements Comparable<Subscription>{
 		this.setPaymentMode(paymentMode);
 		this.setStatus(status);
 		this.setType(type);
+		this.setRegId(regId);
+		this.setAutoRenewal(autoRenewal);
 	}
 
+	
 	@Setter(value = AccessLevel.NONE)
 	private String id;
 	private String type;
@@ -40,11 +43,12 @@ public class Subscription implements Comparable<Subscription>{
     private String paymentMode;
     
     @Setter(value = AccessLevel.NONE)
-    private int amount;
+    private float amount;
     
     private String status;
     private String autoRenewal;
     private String expiryDate;
+    private String regId;
 
 
 
@@ -61,8 +65,8 @@ public class Subscription implements Comparable<Subscription>{
 
 	}
 
-	public void setAmount(int amount) throws InvalidAmountException {
-		if(amount < 1000)
+	public void setAmount(float amount) throws InvalidAmountException {
+		if(amount < 1000.00)
 			throw new InvalidAmountException("Amount cannot be less than 1000");
 		this.amount = amount;
 	}

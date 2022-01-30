@@ -30,12 +30,14 @@ public class Series implements Comparable<Series> {
 	
 	private String genre;
 	private String releaseDate;
-	private URL trailer;
-	private String Cast[];
+	private String trailer;
+	private String Cast;
 	private String ageLimit;
+	private int noofepisodes;
+	private String language;
 	
-	public Series(String id, String seriesName, String length,  String genre, String releaseDate, URL trailer,
-			String[] cast, String ageLimit) throws InvalidIdLengthException, NameNotFoundException {
+	public Series(String id, String seriesName, String cast,  String length, String releaseDate, String trailer,
+			String language, String ageLimit, String genre, int noofepisodes) throws InvalidIdLengthException, NameNotFoundException {
 		super();
 		this.setId(id);
 		this.setSeriesName(seriesName);
@@ -46,6 +48,8 @@ public class Series implements Comparable<Series> {
 		this.setLength(length);
 		this.setReleaseDate(releaseDate);
 		this.setTrailer(trailer);
+		this.setNoofepisodes(noofepisodes);
+		this.setLanguage(language);
 	}
 	
 	public Series() {

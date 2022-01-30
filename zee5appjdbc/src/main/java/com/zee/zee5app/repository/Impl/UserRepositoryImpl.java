@@ -62,12 +62,8 @@ public class UserRepositoryImpl implements UserRepository {
 	
 //	private Set<Register> set = new TreeSet<>(); 
 //	private TreeSet<Register> set = new TreeSet<>();
-	
-	DBUtils dbUtils = DBUtils.getInstance();
-	LoginRepository loginrepository = LoginRepositoryImpl.getInstance();
-	
+
 	//private static int count = -1;
-	
 	
 	//now we make an singleton object for this
 	private UserRepositoryImpl() throws IOException{
@@ -92,6 +88,11 @@ public class UserRepositoryImpl implements UserRepository {
 			repository = new UserRepositoryImpl();
 		return repository;
 	}
+	
+	DBUtils dbUtils = DBUtils.getInstance();
+	LoginRepository loginrepository = LoginRepositoryImpl.getInstance();
+	
+	
 	@Override
 	public String addUser(Register register) {
 		// TODO Auto-generated method stub
@@ -164,19 +165,51 @@ public class UserRepositoryImpl implements UserRepository {
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
+				return "fail11";
 			}
-			return "fail11";
+			
 		}
 		finally {
 			//closure work
 			dbUtils.closeConnection(connection);
 		}
+		return null;
 	}
 	
 	@Override
 	public String updateUser(String id, Register register) throws IdNotFoundException {
 		// TODO Auto-generated method stub
-		return null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		String updateStatement = "UPDATE register SET firstmame = ?, lastname=? where regId = ?";
+		connection = dbUtils.getConnection();
+		
+		try {
+			preparedStatement = connection.prepareStatement(updateStatement);
+			preparedStatement.setString(1, register.getFirstName());
+			preparedStatement.setString(2, register.getLastName());
+			preparedStatement.setString(3, id);
+			
+			int result = preparedStatement.executeUpdate();
+			if(result>0) {
+				connection.commit();
+				return "user updated successfully";
+			}
+			else {
+				connection.rollback();
+				return "fail14";
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "fail14";
+		}
+		finally {
+			dbUtils.closeConnection(connection);
+		}
+		
 	}
 	
 	@Override
@@ -257,12 +290,8 @@ public class UserRepositoryImpl implements UserRepository {
 		
 		try {
 			preparedStatement = connection.prepareStatement(selectStatement);
-			//preparedStatement.setString(1);
-			
 			
 			resultSet = preparedStatement.executeQuery();
-			
-			
 			while(resultSet.next()) {
 			
 				Register register = new Register();
@@ -310,21 +339,30 @@ public class UserRepositoryImpl implements UserRepository {
 				//login2.setUserName(register3.getEmail());
 				String result4  = loginrepository.deleteCredentials(register3.getEmail());
 				if(result4 == "success")
-					return "record deleted";
+					//connection.commit(); - call in login
+					return "user record deleted";
 			}
-			else
-				return "fail";
-			
+			else {
+				connection.rollback();
+				return "fail15";
+			}
+					
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			try {
+				connection.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			e.printStackTrace();
-			//return "fail12";
+			return "fail12";
 		}
 		finally {
 			//closure work
 			dbUtils.closeConnection(connection);
 		}
-		return "fail";
+		return "fail15";
 	}
 	
 	

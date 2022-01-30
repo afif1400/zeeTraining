@@ -1,11 +1,15 @@
 package com.zee.zee5app.service.Impl;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import javax.naming.NameNotFoundException;
+
 import com.zee.zee5app.dto.Series;
 import com.zee.zee5app.exception.IdNotFoundException;
+import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.service.SeriesService;
 import com.zee.zee5app.repository.SeriesRepository;
 import com.zee.zee5app.repository.Impl.SeriesRepositoryImpl;
@@ -15,13 +19,13 @@ public class SeriesServiceImpl implements SeriesService {
 	private SeriesRepository repository = SeriesRepositoryImpl.getInstance();
 	private static SeriesService service;	
 	
-	public static SeriesService getInstance() {
+	public static SeriesService getInstance() throws IOException{
 		if(service == null)
 			service = new SeriesServiceImpl();
 		return service;
 	}
 	
-    private SeriesServiceImpl() {
+    private SeriesServiceImpl() throws IOException {
 		
 	}
 
@@ -44,13 +48,13 @@ public class SeriesServiceImpl implements SeriesService {
 	}
 
 	@Override
-	public Optional<Series> getSeriesById(String id) throws IdNotFoundException {
+	public Optional<Series> getSeriesById(String id) throws IdNotFoundException, NameNotFoundException, InvalidIdLengthException {
 		// TODO Auto-generated method stub
 		return this.repository.getSeriesById(id);
 	}
 
 	@Override
-	public List<Series> getAllSeries() {
+	public Optional<List<Series>> getAllSeries() throws NameNotFoundException, InvalidIdLengthException {
 		// TODO Auto-generated method stub
 		return this.repository.getAllSeries();
 	}
