@@ -31,7 +31,7 @@ public class Config {
 		basicDataSource.setUsername(environment.getProperty("jdbc.username"));
 		basicDataSource.setPassword(environment.getProperty("jdbc.password"));
 		basicDataSource.setUrl(environment.getProperty("jdbc.url"));
-		
+		basicDataSource.setDefaultAutoCommit(false);
 		return basicDataSource;
 		
 	}
