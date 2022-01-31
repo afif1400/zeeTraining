@@ -76,7 +76,7 @@ public class UserRepositoryImpl implements UserRepository {
 	// then object will behave like interface i.e.
 	//w we can only access the interface overridden methods
 	
-	//we use UserRepository here coz we need reference sfrom UserRepository(interface class) not the impl thing.
+	//we use UserRepository here coz we need references from UserRepository(interface class) not the impl thing.
 	private static UserRepository repository;
 	public static UserRepository getInstance() throws IOException {
 		if(repository ==null)
