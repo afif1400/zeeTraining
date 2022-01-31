@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-27T12:44:19.294Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="yK2jlb8DHR4t2VjN1f7S" version="16.4.5" type="github" pages="13">
+<mxfile host="app.diagrams.net" modified="2022-01-31T06:45:11.396Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="x7Nks-OmI4-3947SyoEg" version="16.4.7" type="github" pages="14">
   <diagram id="RB05TvQkEh_5eE79HVn-" name="Page-1">
     <mxGraphModel dx="782" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1270,6 +1270,59 @@
         </mxCell>
         <mxCell id="_V9vJp-srtCVo82sPl0P-17" value="if we are going to execute the particular statement 100 times then it will compile ur sql statement 1 time but it will cross check the values 100 times." style="whiteSpace=wrap;html=1;fontColor=#0000FF;rounded=1;" vertex="1" parent="WP8_t8rUSw5u8WxDBGvq-1">
           <mxGeometry x="-80" y="3090" width="120" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="TyzUOmqr5XV6dRLDuHSa" name="spring ">
+    <mxGraphModel dx="1632" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="ekhKSayVAODZazpdsXBh-0" />
+        <mxCell id="ekhKSayVAODZazpdsXBh-1" parent="ekhKSayVAODZazpdsXBh-0" />
+        <mxCell id="ekhKSayVAODZazpdsXBh-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ekhKSayVAODZazpdsXBh-1" source="ekhKSayVAODZazpdsXBh-2" target="ekhKSayVAODZazpdsXBh-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-2" value="Spring : it is a framework family.&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="ekhKSayVAODZazpdsXBh-1">
+          <mxGeometry x="90" y="90" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ekhKSayVAODZazpdsXBh-1" source="ekhKSayVAODZazpdsXBh-3" target="ekhKSayVAODZazpdsXBh-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ekhKSayVAODZazpdsXBh-1" source="ekhKSayVAODZazpdsXBh-3" target="ekhKSayVAODZazpdsXBh-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-3" value="Spring Core Framework: will take complete responsibility to manage memory and maintain object life cycle" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="ekhKSayVAODZazpdsXBh-1">
+          <mxGeometry x="115" y="245" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ekhKSayVAODZazpdsXBh-1" source="ekhKSayVAODZazpdsXBh-5" target="ekhKSayVAODZazpdsXBh-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-5" value="1. manage memory :&amp;nbsp; layered arch. : multiple singleton objects &amp;amp; also we may need multiple objects for some classes as per req." style="whiteSpace=wrap;html=1;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ekhKSayVAODZazpdsXBh-1">
+          <mxGeometry x="130" y="385" width="280" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-7" value="maintaining the Object life cycle : when it needs to be created&lt;br&gt;when it needs to send for GC&lt;br&gt;whenever it requires other objects" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="ekhKSayVAODZazpdsXBh-1">
+          <mxGeometry x="570" y="207.5" width="150" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ekhKSayVAODZazpdsXBh-1" source="ekhKSayVAODZazpdsXBh-9" target="ekhKSayVAODZazpdsXBh-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ekhKSayVAODZazpdsXBh-1" source="ekhKSayVAODZazpdsXBh-9" target="ekhKSayVAODZazpdsXBh-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-9" value="Container : it is an area where it will hold all ur objects &amp;amp; it is responsible for managing their lifecycle.&lt;br&gt;&lt;br&gt;There are 2 types of containers are available :&lt;br&gt;1. beanFactory&lt;br&gt;2. application context(preffered one)" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="ekhKSayVAODZazpdsXBh-1">
+          <mxGeometry x="170" y="532.5" width="200" height="147.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-11" value="BeanFactory :&amp;nbsp;&lt;br&gt;1. to create the object &amp;amp; manage their life cycle&amp;nbsp;&lt;br&gt;2. it is responsible to provide the objects on demand.&lt;br&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="ekhKSayVAODZazpdsXBh-1">
+          <mxGeometry x="-70" y="576.25" width="140" height="113.75" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ekhKSayVAODZazpdsXBh-1" source="ekhKSayVAODZazpdsXBh-13" target="ekhKSayVAODZazpdsXBh-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-13" value="application context :&amp;nbsp;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="ekhKSayVAODZazpdsXBh-1">
+          <mxGeometry x="490" y="576.25" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ekhKSayVAODZazpdsXBh-15" value="proactively will be available with objects as mentioned&lt;br&gt;if we expecting it should provide the objects for us on demand it will cater that req.&lt;br&gt;&lt;br&gt;&lt;b&gt;application context is built on top of Bean factory container.&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;" vertex="1" parent="ekhKSayVAODZazpdsXBh-1">
+          <mxGeometry x="490" y="716.25" width="210" height="143.75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
