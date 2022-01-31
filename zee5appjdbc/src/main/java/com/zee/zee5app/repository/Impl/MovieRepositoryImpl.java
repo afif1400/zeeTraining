@@ -14,13 +14,15 @@ import java.util.Set;
 
 import javax.naming.NameNotFoundException;
 
+import org.springframework.stereotype.Repository;
+
 import com.zee.zee5app.dto.Movie;
 import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.repository.MovieRepository;
 import com.zee.zee5app.utils.DBUtils;
 
-
+@Repository
 public class MovieRepositoryImpl implements MovieRepository {
 	
 	private static MovieRepository repository;

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.zee.zee5app.dto.Subscription;
 import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidAmountException;
@@ -13,6 +15,7 @@ import com.zee.zee5app.service.SubscriptionService;
 import com.zee.zee5app.repository.SubscriptionRepository;
 import com.zee.zee5app.repository.Impl.SubscriptionRepositoryImpl;
 
+@Service
 public class SubscriptionServiceImpl implements SubscriptionService {
 
 	private SubscriptionRepository repository = SubscriptionRepositoryImpl.getInstance();

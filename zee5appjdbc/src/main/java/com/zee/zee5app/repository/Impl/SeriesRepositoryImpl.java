@@ -14,6 +14,7 @@ import java.util.TreeSet;
 
 import javax.naming.NameNotFoundException;
 
+import org.springframework.stereotype.Repository;
 
 import com.zee.zee5app.dto.Series;
 import com.zee.zee5app.exception.IdNotFoundException;
@@ -21,6 +22,7 @@ import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.repository.SeriesRepository;
 import com.zee.zee5app.utils.DBUtils;
 
+@Repository
 public class SeriesRepositoryImpl implements SeriesRepository {
 	
 	private static SeriesRepository repository;

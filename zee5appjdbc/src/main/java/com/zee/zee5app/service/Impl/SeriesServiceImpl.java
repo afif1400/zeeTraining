@@ -7,6 +7,8 @@ import java.util.Optional;
 
 import javax.naming.NameNotFoundException;
 
+import org.springframework.stereotype.Service;
+
 import com.zee.zee5app.dto.Series;
 import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
@@ -14,6 +16,7 @@ import com.zee.zee5app.service.SeriesService;
 import com.zee.zee5app.repository.SeriesRepository;
 import com.zee.zee5app.repository.Impl.SeriesRepositoryImpl;
 
+@Service
 public class SeriesServiceImpl implements SeriesService {
 
 	private SeriesRepository repository = SeriesRepositoryImpl.getInstance();

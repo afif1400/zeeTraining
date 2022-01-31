@@ -13,6 +13,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import java.util.LinkedList;
 
 import com.zee.zee5app.dto.Login;
@@ -31,6 +37,8 @@ import com.zee.zee5app.utils.PasswordUtils;
 // this can be used for 1st database
 //similary make another file and use it for 2nd database and so on
 // here UserRepository act as an interface which has 5 specific functionalities
+//@Component // it will create singleton object for us
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 	
 	//private Register[] registers = new Register[10];
@@ -66,10 +74,19 @@ public class UserRepositoryImpl implements UserRepository {
 	//private static int count = -1;
 	
 	//now we make an singleton object for this
-	private UserRepositoryImpl() throws IOException{
-		
-	}
+//	private UserRepositoryImpl() throws IOException{
+//		
+//	}
+	@Autowired //it will bring already created object either by using name/type
+    DataSource dataSource;
+	private static LoginRepository loginrepository = null;
 	
+	
+    public UserRepositoryImpl() throws IOException{
+    	//dbUtils = DBUtils.getInstance();
+    	loginrepository = LoginRepositoryImpl.getInstance();
+	}
+    
 	//we cant declare/create objects for interface
 	// we can declare only references
 	/// when we will refer the object whose class is implementing the interface
@@ -77,20 +94,19 @@ public class UserRepositoryImpl implements UserRepository {
 	//w we can only access the interface overridden methods
 	
 	//we use UserRepository here coz we need references from UserRepository(interface class) not the impl thing.
-	private static UserRepository repository;
-	public static UserRepository getInstance() throws IOException {
-		if(repository ==null)
-			//but we refer using interface only i.e.
-			//repository = new UserRepository()
-			// we can only access interface methods
-			
-			// this will use functionalities of the interface and both class only
-			repository = new UserRepositoryImpl();
-		return repository;
-	}
 	
-	DBUtils dbUtils = DBUtils.getInstance();
-	LoginRepository loginrepository = LoginRepositoryImpl.getInstance();
+//	public static UserRepository getInstance() throws IOException {
+//		if(repository ==null)
+//			//but we refer using interface only i.e.
+//			//repository = new UserRepository()
+//			// we can only access interface methods
+//			
+//			// this will use functionalities of the interface and both class only
+//			repository = new UserRepositoryImpl();
+//		return repository;
+//	}
+	
+	
 	
 	
 	@Override
@@ -107,7 +123,12 @@ public class UserRepositoryImpl implements UserRepository {
 		//here we will provide the values against ?(placeholder)
 		
 		//connection object
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(insertStatement);
@@ -169,10 +190,7 @@ public class UserRepositoryImpl implements UserRepository {
 			}
 			
 		}
-		finally {
-			//closure work
-			dbUtils.closeConnection(connection);
-		}
+		
 		return null;
 	}
 	
@@ -183,7 +201,12 @@ public class UserRepositoryImpl implements UserRepository {
 		PreparedStatement preparedStatement = null;
 		
 		String updateStatement = "UPDATE register SET firstmame = ?, lastname=? where regId = ?";
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(updateStatement);
@@ -206,9 +229,7 @@ public class UserRepositoryImpl implements UserRepository {
 			e.printStackTrace();
 			return "fail14";
 		}
-		finally {
-			dbUtils.closeConnection(connection);
-		}
+		
 		
 	}
 	
@@ -220,7 +241,12 @@ public class UserRepositoryImpl implements UserRepository {
 		ResultSet resultSet = null;
 		String selectStatement = "select * from register where regId=?";
 		
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(selectStatement);
@@ -254,11 +280,8 @@ public class UserRepositoryImpl implements UserRepository {
 			e.printStackTrace();
 			//return "fail12";
 		}
-		finally {
-			//closure work
-			dbUtils.closeConnection(connection);
-		}
 		return Optional.empty();
+		
 	}
 	
 	@Override
@@ -286,7 +309,12 @@ public class UserRepositoryImpl implements UserRepository {
 		
 		String selectStatement = "select * from register";
 		
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(selectStatement);
@@ -311,10 +339,6 @@ public class UserRepositoryImpl implements UserRepository {
 			e.printStackTrace();
 			//return "fail12";
 		}
-		finally {
-			//closure work
-			dbUtils.closeConnection(connection);
-		}
 		return Optional.empty();
 	}
 	
@@ -326,7 +350,12 @@ public class UserRepositoryImpl implements UserRepository {
 		
 		String deleteStatement = "delete from register where regId=?";
 		
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(deleteStatement);
@@ -358,10 +387,7 @@ public class UserRepositoryImpl implements UserRepository {
 			e.printStackTrace();
 			return "fail12";
 		}
-		finally {
-			//closure work
-			dbUtils.closeConnection(connection);
-		}
+		
 		return "fail15";
 	}
 	

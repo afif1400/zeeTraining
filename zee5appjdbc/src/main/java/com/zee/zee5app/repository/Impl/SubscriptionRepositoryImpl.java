@@ -10,6 +10,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Repository;
+
 import com.zee.zee5app.dto.Movie;
 import com.zee.zee5app.dto.Register;
 import com.zee.zee5app.dto.Subscription;
@@ -20,7 +22,7 @@ import com.zee.zee5app.repository.MovieRepository;
 import com.zee.zee5app.repository.SubscriptionRepository;
 import com.zee.zee5app.utils.DBUtils;
 
-
+@Repository
 public class SubscriptionRepositoryImpl implements SubscriptionRepository {
 
     private SubscriptionRepositoryImpl() throws IOException {
