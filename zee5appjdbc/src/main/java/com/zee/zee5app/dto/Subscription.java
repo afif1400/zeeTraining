@@ -21,14 +21,14 @@ public class Subscription implements Comparable<Subscription>{
 		
 	}
 
-	public Subscription(String id, String dateOfPurchase, String exprirydate, float amount, String paymentmode,
-			String status, String type, String autorenewal, String regId) throws InvalidIdLengthException, InvalidAmountException {
+	public Subscription(String id, String dateOfPurchase, float amount, String paymentMode, String exprirydate,
+			String status, String type, String autoRenewal, String regId) throws InvalidIdLengthException, InvalidAmountException {
 		super();
 		this.setId(id);
 		this.setDateOfPurchase(dateOfPurchase);
-		this.setExpiryDate(expiryDate);
 		this.setAmount(amount);
 		this.setPaymentMode(paymentMode);
+		this.setExpiryDate(exprirydate);
 		this.setStatus(status);
 		this.setType(type);
 		this.setRegId(regId);

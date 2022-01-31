@@ -45,7 +45,7 @@ public class SubscriptionRepositoryImpl implements SubscriptionRepository {
 		PreparedStatement preparedStatement = null;
 		
 		String insertStatement = "insert into subscription"
-				+"(id, dateofpurchase, expirydate, amount, paymentmode, status, type, autorenewal, regId )"
+				+"(id, dateofpurchase, amount, paymentmode, expirydate, status, type, autorenewal, regId)"
                 +"values(?,?,?,?,?,?,?,?,?)";
 		
         connection = dbUtils.getConnection();
@@ -54,9 +54,9 @@ public class SubscriptionRepositoryImpl implements SubscriptionRepository {
 			preparedStatement = connection.prepareStatement(insertStatement);
 			preparedStatement.setString(1, subscription.getId());
 			preparedStatement.setString(2, subscription.getDateOfPurchase());
-			preparedStatement.setString(3, subscription.getExpiryDate());
-			preparedStatement.setFloat(4, subscription.getAmount());
-			preparedStatement.setString(5, subscription.getPaymentMode());
+			preparedStatement.setFloat(3, subscription.getAmount());
+			preparedStatement.setString(4, subscription.getPaymentMode());
+			preparedStatement.setString(5, subscription.getExpiryDate());
 			preparedStatement.setString(6, subscription.getStatus());
 			preparedStatement.setString(7, subscription.getType());
 			preparedStatement.setString(8, subscription.getAutoRenewal());
@@ -192,7 +192,7 @@ public class SubscriptionRepositoryImpl implements SubscriptionRepository {
 				Subscription subscription = new Subscription();
 				subscription.setId(resultSet.getString("id"));
 				subscription.setDateOfPurchase(resultSet.getString("dateofpurchase"));
-				subscription.setExpiryDate(resultSet.getString("dateofpurchase"));
+				subscription.setExpiryDate(resultSet.getString("expirydate"));
 				subscription.setAmount(resultSet.getFloat("amount"));
 				subscription.setPaymentMode(resultSet.getString("paymentmode"));
 				subscription.setStatus(resultSet.getString("status"));
@@ -233,7 +233,7 @@ public class SubscriptionRepositoryImpl implements SubscriptionRepository {
 				Subscription subscription = new Subscription();
 				subscription.setId(resultSet.getString("id"));
 				subscription.setDateOfPurchase(resultSet.getString("dateofpurchase"));
-				subscription.setExpiryDate(resultSet.getString("dateofpurchase"));
+				subscription.setExpiryDate(resultSet.getString("expirydate"));
 				subscription.setAmount(resultSet.getFloat("amount"));
 				subscription.setPaymentMode(resultSet.getString("paymentmode"));
 				subscription.setStatus(resultSet.getString("status"));

@@ -126,8 +126,7 @@ public class Main2 {
 		try {
 			service2 = SubscriptionServiceImpl.getInstance();
 			
-			subscription = new Subscription("sub009","2019-04-13","2023-05-03", 2599.0f, "credit", "active", "annual", "false", "ab00021");
-			
+			subscription = new Subscription("sub009", "2019-04-13", 2599.0f, "credit", "2023-05-03", "active", "annual", "false", "ab00021");
 			String result = service2.addSubscription(subscription);
 			System.out.println(result);
 			
@@ -262,7 +261,7 @@ public class Main2 {
 		try {
 			service4 = SeriesServiceImpl.getInstance();
 			
-			series = new Series("ser009", "dexter", "joy, ross", "1430", "2012-02-25", null, "english", "15", "thriller", 59);
+			series = new Series("ser009", "dexter", "joy, ross", "1430", "2012-02-25", null, "english", "17", "thriller", 59);
 			
 			String result = service4.addSeries(series);
 			System.out.println(result);
