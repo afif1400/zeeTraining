@@ -22,7 +22,6 @@ import com.zee.zee5app.dto.Movie;
 import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.repository.MovieRepository;
-import com.zee.zee5app.utils.DBUtils;
 
 @Repository
 public class MovieRepositoryImpl implements MovieRepository {
@@ -66,7 +65,7 @@ public class MovieRepositoryImpl implements MovieRepository {
 			
 			int result = preparedStatement.executeUpdate();
 			if(result>0) {
-				connection.commit();
+				//connection.commit();
 				return "movie added successfully";
 			}
 			else {
@@ -111,7 +110,7 @@ public class MovieRepositoryImpl implements MovieRepository {
 			
 			int result = preparedStatement.executeUpdate();
 			if(result>0) {
-				connection.commit();
+				//connection.commit();
 				return "movie deleted successfully";
 			}
 			else {
@@ -156,7 +155,7 @@ public class MovieRepositoryImpl implements MovieRepository {
 			
 			int result = preparedStatement.executeUpdate();
 			if(result>0) {
-				connection.commit();
+				//connection.commit();
 				return "movie updated successfully";
 			}
 			else {

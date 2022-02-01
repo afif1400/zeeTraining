@@ -22,7 +22,6 @@ import com.zee.zee5app.dto.Series;
 import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.repository.SeriesRepository;
-import com.zee.zee5app.utils.DBUtils;
 
 @Repository
 public class SeriesRepositoryImpl implements SeriesRepository {
@@ -67,7 +66,7 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 			
 			int result = preparedStatement.executeUpdate();
 			if(result>0) {
-				connection.commit();
+				//connection.commit();
 				return "series added successfully";
 			}
 			else {
@@ -112,7 +111,7 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 			
 			int result = preparedStatement.executeUpdate();
 			if(result>0) {
-				connection.commit();
+				//connection.commit();
 				return "series deleted successfully";
 			}
 			else {
@@ -157,7 +156,7 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 			
 			int result = preparedStatement.executeUpdate();
 			if(result>0) {
-				connection.commit();
+				//connection.commit();
 				return "series updated successfully";
 			}
 			else {

@@ -31,7 +31,6 @@ import com.zee.zee5app.exception.InvalidNameException;
 import com.zee.zee5app.exception.InvalidPasswordException;
 import com.zee.zee5app.repository.LoginRepository;
 import com.zee.zee5app.repository.UserRepository;
-import com.zee.zee5app.utils.DBUtils;
 import com.zee.zee5app.utils.PasswordUtils;
 
 // this can be used for 1st database
@@ -160,7 +159,7 @@ public class UserRepositoryImpl implements UserRepository {
 			// delete 3 : 3 rows deleted
 			
 			if(result>0) {
-				connection.commit();
+				//connection.commit();
 				Login login = new Login();
 				login.setUserName(register.getEmail());
 				login.setPassword(encryptedPassword);

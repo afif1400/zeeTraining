@@ -20,7 +20,7 @@ import com.zee.zee5app.exception.InvalidAmountException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.repository.MovieRepository;
 import com.zee.zee5app.repository.SubscriptionRepository;
-import com.zee.zee5app.utils.DBUtils;
+
 
 @Repository
 public class SubscriptionRepositoryImpl implements SubscriptionRepository {
@@ -37,8 +37,7 @@ public class SubscriptionRepositoryImpl implements SubscriptionRepository {
 		return repository;
 	
 	}
-	
-	DBUtils dbUtils = DBUtils.getInstance();
+
 	
 	@Override
 	public String addSubscription(Subscription subscription) throws InvalidAmountException {
