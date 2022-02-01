@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import javax.naming.NameNotFoundException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.zee.zee5app.dto.Series;
@@ -19,16 +20,10 @@ import com.zee.zee5app.repository.Impl.SeriesRepositoryImpl;
 @Service
 public class SeriesServiceImpl implements SeriesService {
 
-	private SeriesRepository repository = SeriesRepositoryImpl.getInstance();
-	private static SeriesService service;	
+	@Autowired
+	public SeriesRepository repository;
 	
-	public static SeriesService getInstance() throws IOException{
-		if(service == null)
-			service = new SeriesServiceImpl();
-		return service;
-	}
-	
-    private SeriesServiceImpl() throws IOException {
+    public SeriesServiceImpl() throws IOException {
 		
 	}
 

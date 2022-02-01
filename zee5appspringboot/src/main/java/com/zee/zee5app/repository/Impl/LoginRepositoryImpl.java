@@ -37,8 +37,8 @@ public class LoginRepositoryImpl implements LoginRepository {
 //	}
 	@Autowired
 	DataSource dataSource;
-	@Autowired
-	private LoginRepository loginrepository;
+	//@Autowired
+	//LoginRepository loginrepository;
 	@Autowired
 	private PasswordUtils passwordUtils;
 	

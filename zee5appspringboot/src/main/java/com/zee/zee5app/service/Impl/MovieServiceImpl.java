@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import javax.naming.NameNotFoundException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.zee.zee5app.dto.Movie;
@@ -14,21 +15,17 @@ import com.zee.zee5app.exception.IdNotFoundException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.service.MovieService;
 import com.zee.zee5app.repository.MovieRepository;
+import com.zee.zee5app.repository.UserRepository;
 import com.zee.zee5app.repository.Impl.MovieRepositoryImpl;
 
 @Service
 public class MovieServiceImpl implements MovieService {
 
-	private MovieRepository repository = MovieRepositoryImpl.getInstance();
-	private static MovieService service;	
+
+	@Autowired
+	private MovieRepository repository ;
 	
-	public static MovieService getInstance() throws IOException {
-		if(service == null)
-			service = new MovieServiceImpl();
-		return service;
-	}
-	
-    private MovieServiceImpl() throws IOException{
+    public MovieServiceImpl() throws IOException{
 		
 	}
 

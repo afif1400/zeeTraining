@@ -13,7 +13,9 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import javax.naming.NameNotFoundException;
+import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.zee.zee5app.dto.Series;
@@ -25,19 +27,13 @@ import com.zee.zee5app.utils.DBUtils;
 @Repository
 public class SeriesRepositoryImpl implements SeriesRepository {
 	
-	private static SeriesRepository repository;
-	public static SeriesRepository getInstance() throws IOException {
-		if(repository==null)
-			repository = new SeriesRepositoryImpl();
-		return repository;
-	}
 	
-	private SeriesRepositoryImpl() throws IOException {
+	@Autowired //it will bring already created object either by using name/type
+    DataSource dataSource;
+	
+	public SeriesRepositoryImpl() throws IOException {
 		
 	}
-	
-	DBUtils dbUtils = DBUtils.getInstance();
-
 
 	@Override
 	public String addSeries(Series series) {
@@ -49,7 +45,12 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 				+"(id, name, cast, length, releasedate, trailer, language, agelimit, genre, noofepisodes)"
                 +"values(?,?,?,?,?,?,?,?,?,?)";
 		
-        connection = dbUtils.getConnection();
+        try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
         
         try {
 			preparedStatement = connection.prepareStatement(insertStatement);
@@ -87,9 +88,7 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 			e.printStackTrace();
 			return "fail24";
 		}
-        finally {
-        	dbUtils.closeConnection(connection);
-        }
+        
 	}
 
 	@Override
@@ -100,7 +99,12 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 		
 		String deleteStatement = "delete from series where id = ?";
 		
-        connection = dbUtils.getConnection();
+        try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
         
         try {
 			preparedStatement = connection.prepareStatement(deleteStatement);
@@ -127,9 +131,7 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 			e.printStackTrace();
 			return "fail25";
 		}
-        finally {
-        	dbUtils.closeConnection(connection);
-        }
+        
 	}
 
 	@Override
@@ -139,7 +141,12 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 		PreparedStatement preparedStatement = null;
 		
 		String updateStatement = "UPDATE series SET name = ?, length=?, agelimit =? where id = ?";
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(updateStatement);
@@ -169,9 +176,7 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 			e.printStackTrace();
 			return "fail26";
 		}
-		finally {
-			dbUtils.closeConnection(connection);
-		}
+		
 	}
 
 	@Override
@@ -182,7 +187,12 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 		ResultSet resultSet = null;
 		String selectStatement = "select * from series where id=?";
 		
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(selectStatement);
@@ -209,9 +219,7 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		finally {
-			dbUtils.closeConnection(connection);
-		}
+		
 		return Optional.empty();
 	}
 
@@ -224,7 +232,12 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 		ArrayList<Series> arraylist = new ArrayList<>();
 		String selectStatement = "select * from series";
 		
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(selectStatement);
@@ -252,9 +265,7 @@ public class SeriesRepositoryImpl implements SeriesRepository {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		finally {
-			dbUtils.closeConnection(connection);
-		}
+		
 		return Optional.empty();
 	}
     

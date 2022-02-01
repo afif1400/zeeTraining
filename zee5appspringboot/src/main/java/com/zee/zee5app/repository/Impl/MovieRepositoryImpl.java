@@ -13,7 +13,9 @@ import java.util.Optional;
 import java.util.Set;
 
 import javax.naming.NameNotFoundException;
+import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.zee.zee5app.dto.Movie;
@@ -25,21 +27,13 @@ import com.zee.zee5app.utils.DBUtils;
 @Repository
 public class MovieRepositoryImpl implements MovieRepository {
 	
-	private static MovieRepository repository;
-	public static MovieRepository getInstance() throws IOException {
-		if(repository==null)
-			repository = new MovieRepositoryImpl();
-		return repository;
-	}
 	
-    private MovieRepositoryImpl() throws IOException{
+	@Autowired //it will bring already created object either by using name/type
+    DataSource dataSource;
+	
+    public MovieRepositoryImpl() throws IOException{
 		
 	}
-	
-	DBUtils dbUtils = DBUtils.getInstance();
-
-	
-	
 	
 	@Override
 	public String addMovie(Movie movie) {
@@ -51,7 +45,12 @@ public class MovieRepositoryImpl implements MovieRepository {
 				+"(id, name, cast, length, releasedate, trailer, language, agelimit, genre)"
                 +"values(?,?,?,?,?,?,?,?,?)";
 		
-        connection = dbUtils.getConnection();
+        try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
         
         try {
 			preparedStatement = connection.prepareStatement(insertStatement);
@@ -88,9 +87,7 @@ public class MovieRepositoryImpl implements MovieRepository {
 			e.printStackTrace();
 			return "fail11";
 		}
-        finally {
-        	dbUtils.closeConnection(connection);
-        }
+       
 	}
 
 	@Override
@@ -101,7 +98,12 @@ public class MovieRepositoryImpl implements MovieRepository {
 		
 		String deleteStatement = "delete from movies where id = ?";
 		
-        connection = dbUtils.getConnection();
+        try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
         
         try {
 			preparedStatement = connection.prepareStatement(deleteStatement);
@@ -128,9 +130,7 @@ public class MovieRepositoryImpl implements MovieRepository {
 			e.printStackTrace();
 			return "fail20";
 		}
-        finally {
-        	dbUtils.closeConnection(connection);
-        }
+        
 	}
 
 	@Override
@@ -140,7 +140,12 @@ public class MovieRepositoryImpl implements MovieRepository {
 		PreparedStatement preparedStatement = null;
 		
 		String updateStatement = "UPDATE movies SET name = ?, length=?, agelimit =? where id = ?";
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(updateStatement);
@@ -170,9 +175,7 @@ public class MovieRepositoryImpl implements MovieRepository {
 			e.printStackTrace();
 			return "fail21";
 		}
-		finally {
-			dbUtils.closeConnection(connection);
-		}
+		
 		
 		
 	}
@@ -185,7 +188,12 @@ public class MovieRepositoryImpl implements MovieRepository {
 		ResultSet resultSet = null;
 		String selectStatement = "select * from movies where id=?";
 		
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(selectStatement);
@@ -211,9 +219,7 @@ public class MovieRepositoryImpl implements MovieRepository {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		finally {
-			dbUtils.closeConnection(connection);
-		}
+		
 		return Optional.empty();
 	}
 
@@ -226,7 +232,12 @@ public class MovieRepositoryImpl implements MovieRepository {
 		ArrayList<Movie> arraylist = new ArrayList<>();
 		String selectStatement = "select * from movies";
 		
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(selectStatement);
@@ -252,9 +263,6 @@ public class MovieRepositoryImpl implements MovieRepository {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		finally {
-			dbUtils.closeConnection(connection);
 		}
 		return Optional.empty();
 		

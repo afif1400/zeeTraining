@@ -80,7 +80,7 @@ public class UserRepositoryImpl implements UserRepository {
 	@Autowired //it will bring already created object either by using name/type
     DataSource dataSource;
 	@Autowired
-	private LoginRepository loginrepository;
+	LoginRepository loginrepository;
 	@Autowired
 	private PasswordUtils passwordUtils;
 	

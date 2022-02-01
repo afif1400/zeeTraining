@@ -22,7 +22,7 @@ import com.zee.zee5app.service.UserService;
 public class UserServiceImpl implements UserService {
 
 	@Autowired
-	private UserRepository repository ;
+	private UserRepository repository;
 	
 //	private UserServiceImpl() throws IOException {
 //		

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.zee.zee5app.dto.Subscription;
@@ -18,16 +19,10 @@ import com.zee.zee5app.repository.Impl.SubscriptionRepositoryImpl;
 @Service
 public class SubscriptionServiceImpl implements SubscriptionService {
 
-	private SubscriptionRepository repository = SubscriptionRepositoryImpl.getInstance();
-	private static SubscriptionService service;	
+	@Autowired
+	public SubscriptionRepository repository;
 	
-	public static SubscriptionService getInstance() throws IOException {
-		if(service == null)
-			service = new SubscriptionServiceImpl();
-		return service;
-	}
-	
-    private SubscriptionServiceImpl() throws IOException {
+	public SubscriptionServiceImpl() throws IOException {
 		
 	}
 
