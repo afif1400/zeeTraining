@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -20,16 +21,16 @@ import com.zee.zee5app.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
-	
-	private UserRepository repository  ;
+	@Autowired
+	private UserRepository repository ;
 	
 //	private UserServiceImpl() throws IOException {
 //		
 //	}
 	//getting repository object through spring
-//    public UserServiceImpl() throws IOException {
-//		
-//	}
+    public UserServiceImpl() throws IOException {
+		
+	}
 	
 	
 //	private static UserService service;

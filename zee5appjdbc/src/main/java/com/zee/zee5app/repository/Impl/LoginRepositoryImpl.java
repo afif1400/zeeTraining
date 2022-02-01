@@ -5,6 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.zee.zee5app.dto.Login;
@@ -16,34 +19,49 @@ import com.zee.zee5app.utils.PasswordUtils;
 @Repository
 public class LoginRepositoryImpl implements LoginRepository {
 	
-	DBUtils dbUtils = DBUtils.getInstance();
-    private LoginRepositoryImpl() throws IOException{
+//	DBUtils dbUtils = DBUtils.getInstance();
+//    private LoginRepositoryImpl() throws IOException{
+//		
+//	}
+//    
+//    private static LoginRepository repository;
+//	public static LoginRepository getInstance() throws IOException {
+//		if(repository ==null)
+//			//but we refer using interface only i.e.
+//			//repository = new UserRepository()
+//			// we can only access interface methods
+//			
+//			// this will use functionalities of the interface and both class only
+//			repository = new LoginRepositoryImpl();
+//		return repository;
+//	}
+	@Autowired
+	DataSource dataSource;
+	@Autowired
+	private LoginRepository loginrepository;
+	@Autowired
+	private PasswordUtils passwordUtils;
+	
+	public LoginRepositoryImpl() throws IOException {
 		
-	}
-    
-    private static LoginRepository repository;
-	public static LoginRepository getInstance() throws IOException {
-		if(repository ==null)
-			//but we refer using interface only i.e.
-			//repository = new UserRepository()
-			// we can only access interface methods
-			
-			// this will use functionalities of the interface and both class only
-			repository = new LoginRepositoryImpl();
-		return repository;
 	}
 
 	@Override
 	public String addCredentials(Login login) {
 		// TODO Auto-generated method stub
-		Connection connection;
+		Connection connection = null;
 		PreparedStatement preparedStatement;
 		
 		String insertStatement = "insert into login"
 				+"(userName, password, regId, role)"
 				+"values(?,?,?,?)";
 		
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(insertStatement);
@@ -53,6 +71,7 @@ public class LoginRepositoryImpl implements LoginRepository {
 			preparedStatement.setString(4, login.getRole().toString());
 			
 			int result = preparedStatement.executeUpdate();
+			//connection.commit();
 			if(result>0) {
 				connection.commit();
 				return "success";
@@ -77,10 +96,16 @@ public class LoginRepositoryImpl implements LoginRepository {
 	@Override
 	public String deleteCredentials(String userName) {
 		// TODO Auto-generated method stub
-		Connection connection;
+		Connection connection = null;
 		PreparedStatement preparedStatement;
 		String deleteStatement = "delete from login where username=?";
-		connection = dbUtils.getConnection();
+		
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(deleteStatement);
@@ -105,9 +130,6 @@ public class LoginRepositoryImpl implements LoginRepository {
 			}
 			e.printStackTrace();
 		}
-		finally {
-			dbUtils.closeConnection(connection);
-		}
 		
 		return "fail16";
 	}
@@ -116,15 +138,20 @@ public class LoginRepositoryImpl implements LoginRepository {
 	@Override
 	public String changePassword(String userName, String password) {
 		// TODO Auto-generated method stub
-		Connection connection;
+		Connection connection = null;
 		PreparedStatement preparedStatement;
 		String updateStatement = "UPDATE login SET password =? where userName = ?";
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(updateStatement);
-			String salt = PasswordUtils.getSalt(30);
-			String encryptedPassword = PasswordUtils.generateSecurePassword(password, salt);
+			String salt = passwordUtils.getSalt(30);
+			String encryptedPassword = passwordUtils.generateSecurePassword(password, salt);
 			preparedStatement.setString(1, encryptedPassword);
 			preparedStatement.setString(2, userName);
 			
@@ -148,9 +175,7 @@ public class LoginRepositoryImpl implements LoginRepository {
 			}
 			e.printStackTrace();
 		}
-		finally {
-			dbUtils.closeConnection(connection);
-		}
+	
 		return "fail17";
 		
 	}
@@ -158,10 +183,15 @@ public class LoginRepositoryImpl implements LoginRepository {
 	@Override
 	public String changeRole(String userName, ROLE role) {
 		// TODO Auto-generated method stub
-		Connection connection;
+		Connection connection = null;
 		PreparedStatement preparedStatement;
 		String updateStatement = "UPDATE login SET role =? where userName = ?";
-		connection = dbUtils.getConnection();
+		try {
+			connection = dataSource.getConnection();
+		} catch (SQLException e3) {
+			// TODO Auto-generated catch block
+			e3.printStackTrace();
+		}
 		
 		try {
 			preparedStatement = connection.prepareStatement(updateStatement);
@@ -192,9 +222,6 @@ public class LoginRepositoryImpl implements LoginRepository {
 				e1.printStackTrace();
 			}
 			e.printStackTrace();
-		}
-		finally {
-			dbUtils.closeConnection(connection);
 		}
 		return "fail13";
 	}

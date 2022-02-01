@@ -79,12 +79,15 @@ public class UserRepositoryImpl implements UserRepository {
 //	}
 	@Autowired //it will bring already created object either by using name/type
     DataSource dataSource;
-	private static LoginRepository loginrepository = null;
+	@Autowired
+	private LoginRepository loginrepository;
+	@Autowired
+	private PasswordUtils passwordUtils;
 	
 	
     public UserRepositoryImpl() throws IOException{
     	//dbUtils = DBUtils.getInstance();
-    	loginrepository = LoginRepositoryImpl.getInstance();
+    	//loginrepository = LoginRepositoryImpl.getInstance();
 	}
     
 	//we cant declare/create objects for interface
@@ -141,8 +144,8 @@ public class UserRepositoryImpl implements UserRepository {
 			preparedStatement.setBigDecimal(5, register.getContactnumber());
 			
 			//encrypting and storing password
-			String salt = PasswordUtils.getSalt(30);
-			String encryptedPassword = PasswordUtils.generateSecurePassword(register.getPassword(), salt);
+			String salt = passwordUtils.getSalt(30);
+			String encryptedPassword = passwordUtils.generateSecurePassword(register.getPassword(), salt);
 			preparedStatement.setString(6, encryptedPassword);
 			
 			///username: emailid
@@ -157,6 +160,7 @@ public class UserRepositoryImpl implements UserRepository {
 			// delete 3 : 3 rows deleted
 			
 			if(result>0) {
+				connection.commit();
 				Login login = new Login();
 				login.setUserName(register.getEmail());
 				login.setPassword(encryptedPassword);
@@ -165,7 +169,7 @@ public class UserRepositoryImpl implements UserRepository {
 				
 				String result2 = loginrepository.addCredentials(login);
 				if(result2.equals("success")) {
-					//connection.commit();
+				//	connection.commit();
 					return "user added successfully";
 					
 				}

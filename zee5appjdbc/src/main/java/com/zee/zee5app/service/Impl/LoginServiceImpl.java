@@ -2,6 +2,10 @@ package com.zee.zee5app.service.Impl;
 
 import java.io.IOException;
 
+import javax.sql.DataSource;
+import javax.xml.crypto.Data;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.zee.zee5app.dto.Login;
@@ -14,18 +18,21 @@ import com.zee.zee5app.service.LoginService;
 @Service
 public class LoginServiceImpl implements LoginService {
 
-    private LoginRepository repository = LoginRepositoryImpl.getInstance() ;
+    @Autowired
+	DataSource dataSource;
+	@Autowired
+	private LoginRepository repository = null ;
 	
-	private LoginServiceImpl() throws IOException {
+	public LoginServiceImpl() throws IOException {
 		
 	}
 	
-	private static LoginService service;
-	public static LoginService getInstance() throws IOException{
-		if(service==null)
-			service = new LoginServiceImpl();
-		return service;
-	}
+//	private static LoginService service;
+//	public static LoginService getInstance() throws IOException{
+//		if(service==null)
+//			service = new LoginServiceImpl();
+//		return service;
+//	}
 	
 	@Override
 	public String addCredentials(Login login) {
