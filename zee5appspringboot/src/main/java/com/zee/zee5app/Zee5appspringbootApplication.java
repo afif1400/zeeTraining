@@ -28,7 +28,7 @@ public class Zee5appspringbootApplication {
 	UserRepository userRepository  = applicationContext.getBean(UserRepository.class);
 	Register register;
 	try {
-		register = new Register("ab00761","riya","sharma","riy22a@gmail.com","sdSEs2",null);
+		register = new Register("ab00121","riya","sharma","riy22a@gmail.com","sdSEs2",null);
 		register.setContactnumber(new BigDecimal("9813973123"));
 		
         System.out.println(userRepository.addUser(register));
