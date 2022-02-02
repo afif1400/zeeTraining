@@ -1,1 +1,30 @@
-<mxfile host="app.diagrams.net" modified="2022-02-02T06:30:39.469Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="VgfU46yuXy85VCECNuJh" version="16.5.2" type="github"><diagram id="qnO3Mqqr-Y-RrVbjAcAI" name="Page-1">ddG9DoMgEADgp2FH6I+7tXXp5NCZyFVI0DNIo+3TV4PUEtuFHN8dHDkIz5rxYkWnrijBEEblSPiJMHZM2bTO8PSwO1APtdXSU7JCqV+wYCh7aAl9VOgQjdNdjBW2LVQuMmEtDnHZHU3ctRM1bKCshNnqTUunvKZ7unoBulahc0KXTCNC8QK9EhKHL+I54ZlFdD5qxgzMPLswF3/u/Cf7eZiF1v04MAXr3dMm+iCevwE=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-02-02T07:03:42.042Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="DPBfM9arQmO6pdCYzk1s" version="16.5.2" type="github">
+  <diagram id="qnO3Mqqr-Y-RrVbjAcAI" name="Page-1">
+    <mxGraphModel dx="782" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-1" value="ORM : object relational mapping.&lt;br&gt;&lt;br&gt;insert into register (regid, firstname,lastname.....) values(?,?,?,....);&lt;br&gt;&lt;br&gt;setString(1,value)&lt;br&gt;setInt(2, value)&lt;br&gt;&lt;br&gt;class fields ===&amp;gt; columns from table.&lt;br&gt;entity:&lt;br&gt;ORM mapping.&lt;br&gt;class ===&amp;gt; table" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="70" width="230" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J2ylDG6Hb6_4M1H-GzZ8-2" target="J2ylDG6Hb6_4M1H-GzZ8-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-2" value="jpa will give its common instructions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J2ylDG6Hb6_4M1H-GzZ8-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-3" value="Dialect" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-7" value="DB type" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="370" y="590" width="60" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
