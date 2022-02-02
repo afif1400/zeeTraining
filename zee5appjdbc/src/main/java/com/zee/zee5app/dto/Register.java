@@ -23,7 +23,7 @@ import java.math.BigInteger;
 //@Data
 @Setter
 @Getter
-//@AllArgsConstructor
+@AllArgsConstructor
 //@NoArgsConstructor
 
 //we use this method to override instead of other one used below coz when we change anything later, it can handle on its own
@@ -31,55 +31,48 @@ import java.math.BigInteger;
 @ToString
 
 public class Register implements Comparable<Register>{
-//public class Register {
-	//add contact number field
-	public Register(String id, String firstName, String lastName, String email, String password, BigDecimal contactnumber) 
-			throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
-		super();
- 		this.setId(id);
-		this.setFirstName(firstName);
-		this.setLastName(lastName);
-		this.setEmail(email);
-		this.setPassword(password);
-		this.setContactnumber(contactnumber);	
-		}
-	
-	public Register(String id, String firstName, String lastName, String email, String password) 
-			throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
-		super();
- 		this.setId(id);
-		this.setFirstName(firstName);
-		this.setLastName(lastName);
-		this.setEmail(email);
-		this.setPassword(password);
-			
-		}
+////public class Register {
+//	//add contact number field
+//	public Register(String id, String firstName, String lastName, String email, String password, BigDecimal contactnumber) 
+//			throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
+//		super();
+// 		this.setId(id);
+//		this.setFirstName(firstName);
+//		this.setLastName(lastName);
+//		this.setEmail(email);
+//		this.setPassword(password);
+//		this.setContactnumber(contactnumber);	
+//		}
+//	
+//	public Register(String id, String firstName, String lastName, String email, String password) 
+//			throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
+//		super();
+// 		this.setId(id);
+//		this.setFirstName(firstName);
+//		this.setLastName(lastName);
+//		this.setEmail(email);
+//		this.setPassword(password);
+//			
+//		}
 
-	@Setter(value = AccessLevel.NONE)
+	
 	private String id;
 	// id value should have min length of 6
 	// we have to write a code to validate the length and assign the value
 	
-	@Setter(value = AccessLevel.NONE)
+	
 	private String firstName;
 	
-	@Setter(value = AccessLevel.NONE)
+	
 	private String lastName;
 	
-	@Setter(value = AccessLevel.NONE)
+	
 	private String email;
 	
-	@Setter(value = AccessLevel.NONE)
+	
 	private String password;
 	
 	private BigDecimal contactnumber;
-	
-	public Register() {
-		//Explicit Default Constructor
-		// any kind of customization during the initialization of object then its better
-		// to introduce ECD or PC or both as per need.
-		//System.out.println("hello");
-	}
 
 	//here Main is caller for this
 	public void setId(String id) throws InvalidIdLengthException {

@@ -1,23 +1,11 @@
 package com.zee.zee5app.repository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import javax.naming.NameNotFoundException;
-
-import com.zee.zee5app.dto.Movie;
 import com.zee.zee5app.dto.Series;
-import com.zee.zee5app.exception.IdNotFoundException;
-import com.zee.zee5app.exception.InvalidIdLengthException;
 
-
-public interface SeriesRepository {
-	
-	public String addSeries(Series series); 
-	public String deleteSeries(String id) throws IdNotFoundException;
-	public String modifySeries(String id, Series series) throws IdNotFoundException;
-	public Optional<Series> getSeriesById(String id) throws IdNotFoundException, NameNotFoundException, InvalidIdLengthException;
-	public Optional<List<Series>> getAllSeries() throws InvalidIdLengthException, NameNotFoundException;
+@Repository
+public interface SeriesRepository extends JpaRepository<Series, String> {
 
 }

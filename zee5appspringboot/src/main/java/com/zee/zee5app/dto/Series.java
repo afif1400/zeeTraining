@@ -1,60 +1,62 @@
 package com.zee.zee5app.dto;
 
-import java.net.URL;
-import java.lang.*;
-import javax.naming.NameNotFoundException;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
-import com.zee.zee5app.exception.InvalidIdLengthException;
+import org.hibernate.validator.constraints.Length;
 
-import lombok.AccessLevel;
-import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import java.util.Objects;
-//@Data
+
 @Setter
 @Getter
 @EqualsAndHashCode
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
+
+@Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = "seriesname")}, name = "series")
 public class Series implements Comparable<Series> {
 	
-	@Setter(value = AccessLevel.NONE)
-	private String seriesName;
-	
-	private String length;
-	
-	@Setter(value = AccessLevel.NONE)
+	@Id
+	@Column(name = "id")
+	@Length(min = 6)
 	private String id;
 	
-	private String genre;
-	private String releaseDate;
-	private String trailer;
+    @NotBlank
+ 
+	private String seriesname;
+    @NotBlank
 	private String Cast;
-	private String ageLimit;
-	private int noofepisodes;
+	@NotNull
+	private String releaseDate;
+	//@NotBlank
+	private String trailer;
+	@NotBlank
 	private String language;
 	
-	public Series(String id, String seriesName, String cast,  String length, String releaseDate, String trailer,
-			String language, String ageLimit, String genre, int noofepisodes) throws InvalidIdLengthException, NameNotFoundException {
-		super();
-		this.setId(id);
-		this.setSeriesName(seriesName);
-		this.setAgeLimit(ageLimit);
-		this.setCast(cast);
-		this.setGenre(genre);
-		
-		this.setLength(length);
-		this.setReleaseDate(releaseDate);
-		this.setTrailer(trailer);
-		this.setNoofepisodes(noofepisodes);
-		this.setLanguage(language);
-	}
+	@Max(value = 70)
+	private String ageLimit;
 	
-	public Series() {
-		
-	}
+	@NotBlank
+	private String genre;
+
+	@Min(value = 1)
+	private int noofepisodes;
+	
+	
 
 
 	@Override
@@ -63,17 +65,6 @@ public class Series implements Comparable<Series> {
 		return this.id.compareTo(o.getId());
 	}
 
-	public void setSeriesName(String seriesName) throws NameNotFoundException {
 
-		if(seriesName == null)
-			throw new NameNotFoundException("series name not found");
-		this.seriesName = seriesName;
-	}
-
-	public void setId(String id) throws InvalidIdLengthException {
-		if(id.length()<6)
-			throw new InvalidIdLengthException("id length less than 6");
-		this.id = id;
-	}
 	
 }

@@ -1,6 +1,7 @@
 package com.zee.zee5app.service.Impl;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import javax.sql.DataSource;
 import javax.xml.crypto.Data;
@@ -10,52 +11,71 @@ import org.springframework.stereotype.Service;
 
 import com.zee.zee5app.dto.Login;
 import com.zee.zee5app.dto.ROLE;
+import com.zee.zee5app.dto.Register;
+import com.zee.zee5app.exception.IdNotFoundException;
+import com.zee.zee5app.exception.InvalidEmailException;
+import com.zee.zee5app.exception.InvalidIdLengthException;
+import com.zee.zee5app.exception.InvalidNameException;
+import com.zee.zee5app.exception.InvalidPasswordException;
 import com.zee.zee5app.repository.LoginRepository;
-
-import com.zee.zee5app.repository.Impl.LoginRepositoryImpl;
 import com.zee.zee5app.service.LoginService;
 
 @Service
 public class LoginServiceImpl implements LoginService {
 
-    @Autowired
-	DataSource dataSource;
+//    @Autowired
+//	DataSource dataSource;
 	@Autowired
-	private LoginRepository repository = null ;
-	
-	public LoginServiceImpl() throws IOException {
-		
-	}
-	
-//	private static LoginService service;
-//	public static LoginService getInstance() throws IOException{
-//		if(service==null)
-//			service = new LoginServiceImpl();
-//		return service;
+	private LoginRepository repository ;
+//	
+//	public LoginServiceImpl() throws IOException {
+//		
 //	}
 	
 	@Override
 	public String addCredentials(Login login) {
 		// TODO Auto-generated method stub
-		return repository.addCredentials(login);
+		Login login2 = repository.save(login);
+		if (login2 != null) {
+			return "success";
+		} else {
+			return "fail";
+		}
 	}
 
 	@Override
 	public String deleteCredentials(String userName) {
 		// TODO Auto-generated method stub
-		return repository.deleteCredentials(userName);
+		
+		Optional<Login> optional;
+		try {
+			optional = repository.findById(userName);
+			if(optional.isEmpty()) {
+				throw new IdNotFoundException("record not found");
+			}
+			else {
+				repository.deleteById(userName);
+				return "register record deleted";
+			}
+		} catch (IdNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "fail";
+		}
 	}
 
 	@Override
 	public String changePassword(String userName, String password) {
 		// TODO Auto-generated method stub
-		return repository.changePassword(userName, password);
+		return null;
 	}
 
 	@Override
 	public String changeRole(String userName, ROLE role) {
 		// TODO Auto-generated method stub
-		return repository.changeRole(userName, role);
+		return null;
 	}
+
+	
 
 }
