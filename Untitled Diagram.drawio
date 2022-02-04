@@ -1,28 +1,74 @@
-<mxfile host="app.diagrams.net" modified="2022-02-03T14:14:03.631Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="MiMKmGst3P8uVZkNVKrb" version="16.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-04T11:16:06.555Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="ix6zJz8dVVz--bFf1eyY" version="16.5.3" type="github" pages="2">
   <diagram id="qnO3Mqqr-Y-RrVbjAcAI" name="Page-1">
-    <mxGraphModel dx="1038" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-1" value="ORM : object relational mapping.&lt;br&gt;&lt;br&gt;insert into register (regid, firstname,lastname.....) values(?,?,?,....);&lt;br&gt;&lt;br&gt;setString(1,value)&lt;br&gt;setInt(2, value)&lt;br&gt;&lt;br&gt;class fields ===&amp;gt; columns from table.&lt;br&gt;entity:&lt;br&gt;ORM mapping.&lt;br&gt;class ===&amp;gt; table" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-1" value="ORM : object relational mapping.&lt;br&gt;&lt;br&gt;insert into register (regid, firstname,lastname.....) values(?,?,?,....);&lt;br&gt;&lt;br&gt;setString(1,value)&lt;br&gt;setInt(2, value)&lt;br&gt;&lt;br&gt;class fields ===&amp;gt; columns from table.&lt;br&gt;entity:&lt;br&gt;ORM mapping.&lt;br&gt;class ===&amp;gt; table" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="90" y="70" width="230" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J2ylDG6Hb6_4M1H-GzZ8-2" target="J2ylDG6Hb6_4M1H-GzZ8-3">
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="J2ylDG6Hb6_4M1H-GzZ8-2" target="J2ylDG6Hb6_4M1H-GzZ8-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-2" value="jpa will give its common instructions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-2" value="jpa will give its common instructions" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="340" y="310" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J2ylDG6Hb6_4M1H-GzZ8-3">
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="J2ylDG6Hb6_4M1H-GzZ8-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="400" y="590" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-3" value="Dialect" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-3" value="Dialect" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
           <mxGeometry x="340" y="450" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-7" value="DB type" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+        <mxCell id="J2ylDG6Hb6_4M1H-GzZ8-7" value="DB type" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
           <mxGeometry x="370" y="590" width="60" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="EU679VQE_9L2-Tgd5ZYj" name="Page-2">
+    <mxGraphModel dx="782" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-0" />
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-1" parent="lsGGW3PEK0zyy4-2Khcs-0" />
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lsGGW3PEK0zyy4-2Khcs-1" source="lsGGW3PEK0zyy4-2Khcs-2" target="lsGGW3PEK0zyy4-2Khcs-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-2" value="Web Services :&amp;nbsp; it is a service which will help us to share the data over the cross platforms." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="lsGGW3PEK0zyy4-2Khcs-1">
+          <mxGeometry x="160" y="40" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lsGGW3PEK0zyy4-2Khcs-1" source="lsGGW3PEK0zyy4-2Khcs-3" target="lsGGW3PEK0zyy4-2Khcs-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lsGGW3PEK0zyy4-2Khcs-1" source="lsGGW3PEK0zyy4-2Khcs-3" target="lsGGW3PEK0zyy4-2Khcs-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-3" value="1. SOAP based&lt;br&gt;2. Rest based&lt;br&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="lsGGW3PEK0zyy4-2Khcs-1">
+          <mxGeometry x="230" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-5" value="1. Simple Object Access Protocol&lt;br&gt;&lt;br&gt;2. xml only&amp;nbsp;&lt;br&gt;3. its own protocol&lt;br&gt;4. it has its own security&lt;br&gt;5. statefull/ stateless" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="lsGGW3PEK0zyy4-2Khcs-1">
+          <mxGeometry x="20" y="360" width="150" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-7" value="Representational state Transfer.&lt;br&gt;2. xml , json, html,text,any type of file (binary or char based files)&lt;br&gt;3. it will support only for http protocol&lt;br&gt;4. rest will not have its own security so that it will use the security from the underlying protocol i.e. security of http protocol&lt;br&gt;5. stateless protocol" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="lsGGW3PEK0zyy4-2Khcs-1">
+          <mxGeometry x="440" y="360" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lsGGW3PEK0zyy4-2Khcs-1" source="lsGGW3PEK0zyy4-2Khcs-9" target="lsGGW3PEK0zyy4-2Khcs-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-9" value="req" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="lsGGW3PEK0zyy4-2Khcs-1">
+          <mxGeometry x="680" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="lsGGW3PEK0zyy4-2Khcs-1" source="lsGGW3PEK0zyy4-2Khcs-10" target="lsGGW3PEK0zyy4-2Khcs-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="560" />
+              <mxPoint x="740" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lsGGW3PEK0zyy4-2Khcs-10" value="Server" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="lsGGW3PEK0zyy4-2Khcs-1">
+          <mxGeometry x="990" y="440" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
