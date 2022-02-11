@@ -19,14 +19,14 @@ public class Login implements Comparable<Login>{
 	
 	private String password;
 	private String regId;
-	private ROLE role;
 	
-	public Login(String userName, String password, String regId, ROLE role) {
+	
+	public Login(String userName, String password, String regId) {
 		super();
 		this.userName = userName;
 		this.password = password;
 		this.regId = regId;
-		this.role = role;
+		
 	}
 
 	public Login() {

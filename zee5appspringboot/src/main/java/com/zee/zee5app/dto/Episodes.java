@@ -3,6 +3,8 @@ package com.zee.zee5app.dto;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotBlank;
@@ -34,13 +36,18 @@ public class Episodes implements Comparable<Movie> {
 	@NotBlank
 	private String episodename;
 	private int length;
-	@NotBlank
-	private String seriesid;
+	
 
 	@Override
 	public int compareTo(Movie o) {
 		// TODO Auto-generated method stub
 		return this.id.compareTo(o.getId());
 	}
+	
+	@ManyToOne
+	// this episode table should have FK.seriesid
+	@JoinColumn(name="seriesid") // to createFK
+	
+	private Series series; // series id and that col should act as a FK.
 
 }
