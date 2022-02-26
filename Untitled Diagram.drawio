@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-24T05:11:00.632Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="rjZ5xA6W4KZBnBHV_qFD" version="16.6.2" type="github" pages="12">
+<mxfile host="app.diagrams.net" modified="2022-02-25T23:59:29.652Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="vlwVtAo8rkfogHD2hA_3" version="16.6.2" type="github" pages="12">
   <diagram id="qnO3Mqqr-Y-RrVbjAcAI" name="Page-1">
-    <mxGraphModel dx="782" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -280,7 +280,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="hvuhCLALv11Ev_ylI5MM" name="security">
-    <mxGraphModel dx="782" dy="403" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="vBnPFmUW9h5J7oF-oDUC-0" />
         <mxCell id="vBnPFmUW9h5J7oF-oDUC-1" parent="vBnPFmUW9h5J7oF-oDUC-0" />
@@ -325,7 +325,7 @@
         <mxCell id="q5Pj8jKiWvPMLUpeJEaU-5" value="existing user" style="shape=rhombus;html=1;dashed=0;whitespace=wrap;perimeter=rhombusPerimeter;" parent="vBnPFmUW9h5J7oF-oDUC-1" vertex="1">
           <mxGeometry x="710" y="580" width="80" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="5tOpR3uED4niU_0y5pdA-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="vBnPFmUW9h5J7oF-oDUC-1" source="q5Pj8jKiWvPMLUpeJEaU-6" target="5tOpR3uED4niU_0y5pdA-0">
+        <mxCell id="5tOpR3uED4niU_0y5pdA-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="vBnPFmUW9h5J7oF-oDUC-1" source="q5Pj8jKiWvPMLUpeJEaU-6" target="5tOpR3uED4niU_0y5pdA-0" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="q5Pj8jKiWvPMLUpeJEaU-6" value="check exsting user by calling existsEmailId/username repo method from Repository" style="whiteSpace=wrap;html=1;dashed=0;" parent="vBnPFmUW9h5J7oF-oDUC-1" vertex="1">
@@ -426,14 +426,14 @@
         <mxCell id="q5Pj8jKiWvPMLUpeJEaU-40" value="will get a new token &amp;amp; will be used for further interaction" style="whiteSpace=wrap;html=1;rounded=0;" parent="vBnPFmUW9h5J7oF-oDUC-1" vertex="1">
           <mxGeometry x="135" y="1020" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="5tOpR3uED4niU_0y5pdA-0" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="vBnPFmUW9h5J7oF-oDUC-1">
+        <mxCell id="5tOpR3uED4niU_0y5pdA-0" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="vBnPFmUW9h5J7oF-oDUC-1" vertex="1">
           <mxGeometry x="1245" y="555" width="60" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="Ny9ZewB93b-qWOIkmHI8" name="security Arch">
-    <mxGraphModel dx="1632" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1888" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="VwI9qJYVQ6O2U3wyk_Q--0" />
         <mxCell id="VwI9qJYVQ6O2U3wyk_Q--1" parent="VwI9qJYVQ6O2U3wyk_Q--0" />
@@ -580,6 +580,9 @@
         </mxCell>
         <mxCell id="VwI9qJYVQ6O2U3wyk_Q--32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="VwI9qJYVQ6O2U3wyk_Q--1" source="VwI9qJYVQ6O2U3wyk_Q--12" target="VwI9qJYVQ6O2U3wyk_Q--18" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="A4TiGGbGJuK3bOwngx0M-0" value="RBA : role based Access" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="VwI9qJYVQ6O2U3wyk_Q--1">
+          <mxGeometry x="-150" y="255" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
