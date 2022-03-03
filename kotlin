@@ -1,1 +1,46 @@
-<mxfile host="app.diagrams.net" modified="2022-03-03T08:58:07.982Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" version="16.6.4" etag="045bZ9S1XA6qGA3t_tqt" type="github"><diagram id="9Rs4eTfUiB7FOB9u833q">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-03-03T10:23:33.205Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="vU449rIPAQV-Hf6LdOQ1" version="16.6.4" type="github">
+  <diagram id="9Rs4eTfUiB7FOB9u833q" name="Page-1">
+    <mxGraphModel dx="1278" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-1" value="1. Kotlin is an open source statically typed programming language that runs on JVM .&lt;br&gt;(variables type will be known @ the time of compile time )&lt;br&gt;&lt;br&gt;it combines OOPs and Functional prgramming.&lt;br&gt;&lt;br&gt;Reason to use Kotlin :&lt;br&gt;1. statically typed and easy to read and write&lt;br&gt;2. it doesn&#39;t require a semicolon&lt;br&gt;3. it is compatible with java (a project can have mixture of kotlin and java.)&lt;br&gt;4. kotlin&#39;s type system will help us to eliminate the NPE.&lt;br&gt;5. easy to write." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="50" width="460" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-2" value="Features :&amp;nbsp;&lt;br&gt;1. Trimmed Coding :&amp;nbsp;&lt;br&gt;2. open source&lt;br&gt;3. OOPs and FP.&lt;br&gt;4. better in performance bcoz easy to compile while working with kotlin.&lt;br&gt;4. null safety&lt;br&gt;5. interportability with java :&amp;nbsp;&lt;br&gt;6. smart casting&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="410" width="430" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Vs-5HUkDsT7DqXBtjMm8-3" target="Vs-5HUkDsT7DqXBtjMm8-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-3" value="Main.kt" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Vs-5HUkDsT7DqXBtjMm8-4" target="Vs-5HUkDsT7DqXBtjMm8-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-4" value="compatible byte code for JVM" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-6" value="JVM" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-8" value="javac&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="840" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Vs-5HUkDsT7DqXBtjMm8-9" target="Vs-5HUkDsT7DqXBtjMm8-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-9" value="kotlinC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="730" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-10" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Vs-5HUkDsT7DqXBtjMm8-12" value="String result = &quot;abhi&quot; + &quot;good afternoon&quot;;&lt;br&gt;&lt;br&gt;System.out.println(&quot;my name is $name&quot;);" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="960" width="310" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
