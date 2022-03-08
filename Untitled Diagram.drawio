@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-03-02T14:10:43.502Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="hg9ZV37y86Ahj5hcJUV6" version="16.6.3" type="github" pages="12">
+<mxfile host="app.diagrams.net" modified="2022-03-08T13:36:49.661Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36" etag="_yXDrll8KqorCLJx46Gb" version="16.6.4" type="github" pages="13">
   <diagram id="qnO3Mqqr-Y-RrVbjAcAI" name="Page-1">
-    <mxGraphModel dx="1022" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -950,6 +950,20 @@
         </mxCell>
         <mxCell id="UoNbdY4WA4cSMJpzdTtY-4" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="UoNbdY4WA4cSMJpzdTtY-1">
           <mxGeometry x="280" y="330" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Pz8rSL3rfSSsPm1JcAHr" name="ios swift">
+    <mxGraphModel dx="1038" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="FxWJpzolLo_Sdd_1S3IR-0" />
+        <mxCell id="FxWJpzolLo_Sdd_1S3IR-1" parent="FxWJpzolLo_Sdd_1S3IR-0" />
+        <mxCell id="FxWJpzolLo_Sdd_1S3IR-2" value="XCode :&amp;nbsp; its an editor which is used to develop the application for macbook, iphone, iwatch &lt;b&gt;(apple devices).&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="FxWJpzolLo_Sdd_1S3IR-1">
+          <mxGeometry x="60" y="60" width="390" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FxWJpzolLo_Sdd_1S3IR-3" value="Swift : it is a programming language which is developed by Apple for iOS development.&lt;br&gt;&lt;br&gt;C and Objective C&amp;nbsp;&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="FxWJpzolLo_Sdd_1S3IR-1">
+          <mxGeometry x="60" y="210" width="410" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
